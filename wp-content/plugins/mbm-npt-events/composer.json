@@ -1,0 +1,25 @@
+{
+    "name": "mbm/npt-events",
+    "description": "Amplify Events",
+    "type": "project",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/MadeByMunstersLLC/munsters-gutenberg-support.git"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MBM\\NonProfitToolkit\\Events\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "voku/simple_html_dom": "dev-master",
+        "madebymunsters/munsters-gutenberg-support": "1.1.0"
+    }
+}

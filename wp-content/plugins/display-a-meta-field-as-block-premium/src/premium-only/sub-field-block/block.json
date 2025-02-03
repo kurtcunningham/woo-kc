@@ -1,0 +1,138 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mfb/sub-field-block",
+  "title": "Sub Field Block",
+  "category": "theme",
+  "ancestor": ["mfb/meta-field-block"],
+  "description": "Display sub fields of the meta field block",
+  "keywords": [
+    "meta",
+    "custom",
+    "acf",
+    "meta field",
+    "custom field",
+    "setting field",
+    "metadata"
+  ],
+  "attributes": {
+    "templateLock": {
+      "type": ["string", "boolean"],
+      "enum": ["all", "insert", "contentOnly", false]
+    },
+    "textAlign": {
+      "type": "string"
+    },
+    "fieldPath": {
+      "type": "array",
+      "default": []
+    },
+    "fieldSettings": {
+      "type": "object",
+      "default": {}
+    },
+    "hideEmpty": {
+      "type": "boolean",
+      "default": false
+    },
+    "emptyMessage": {
+      "type": "string",
+      "default": ""
+    },
+    "prefix": {
+      "type": "string"
+    },
+    "suffix": {
+      "type": "string"
+    },
+    "labelAsPrefix": {
+      "type": "boolean",
+      "default": false
+    },
+    "prefixSettings": {
+      "type": "object"
+    },
+    "suffixSettings": {
+      "type": "object"
+    },
+    "displayLayout": {
+      "type": "string",
+      "default": ""
+    },
+    "tagName": {
+      "type": "string",
+      "default": "div"
+    },
+    "showOutline": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": ["wide", "full"],
+    "background": {
+      "backgroundImage": true
+    },
+    "color": {
+      "background": true,
+      "text": true,
+      "gradients": true,
+      "link": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "blockGap": true,
+      "__experimentalDefaultControls": {
+        "margin": true,
+        "padding": true,
+        "blockGap": true
+      }
+    },
+    "dimensions": {
+      "minHeight": true
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true,
+      "__experimentalDefaultControls": false
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "__experimentalFontFamily": true,
+      "__experimentalFontStyle": true,
+      "__experimentalFontWeight": true,
+      "__experimentalLetterSpacing": true,
+      "__experimentalTextTransform": true,
+      "__experimentalTextDecoration": true,
+      "__experimentalDefaultControls": {
+        "fontSize": true,
+        "lineHeight": true,
+        "fontAppearance": true,
+        "textTransform": true
+      }
+    },
+    "layout": {
+      "allowSizingOnChildren": false
+    }
+  },
+  "usesContext": [
+    "postId",
+    "postType",
+    "mfb/metaType",
+    "mfb/rootName",
+    "mfb/objectType",
+    "mfb/objectId",
+    "mfb/value",
+    "mfb/repeaterIndex"
+  ],
+  "textdomain": "display-a-meta-field-as-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

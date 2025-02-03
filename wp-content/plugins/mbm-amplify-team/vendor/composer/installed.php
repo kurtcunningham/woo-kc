@@ -1,0 +1,52 @@
+<?php return array(
+    'root' => array(
+        'name' => 'mbm/amplify-teams',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'reference' => null,
+        'type' => 'project',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        'madebymunsters/munsters-gutenberg-support' => array(
+            'pretty_version' => '1.1.0',
+            'version' => '1.1.0.0',
+            'reference' => '0934b16d072263483527fa33fc4e04a63ba58af5',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../madebymunsters/munsters-gutenberg-support',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'mbm/amplify-teams' => array(
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'reference' => null,
+            'type' => 'project',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'symfony/css-selector' => array(
+            'pretty_version' => '7.2.x-dev',
+            'version' => '7.2.9999999.9999999-dev',
+            'reference' => '601a5ce9aaad7bf10797e3663faefce9e26c24e2',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/css-selector',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'voku/simple_html_dom' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '61beaaa809d3c598e1310d32080b2ebbe6ff91d1',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../voku/simple_html_dom',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'dev_requirement' => false,
+        ),
+    ),
+);

@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"title": "Gridible Offset",
+	"name": "gridible/responsive-spacer",
+	"description": "You gotta keep 'em separated. Control spacing between elements based on breakpoints.",
+	"category": "design",
+	"keywords": [
+		"spacer",
+		"offset"
+	],
+	"usesContext": [ "orientation" ],
+	"supports": {
+		"anchor": true,
+		"spacing": {
+			"margin": [ "top", "bottom" ],
+			"__experimentalDefaultControls": {
+				"margin": true
+			}
+		}
+	},
+	"editorScript": "gridible-blocks/editor/script",
+	"editorStyle": "gridible-blocks/editor/style",
+	"style": "gridible-blocks/front/style"
+}

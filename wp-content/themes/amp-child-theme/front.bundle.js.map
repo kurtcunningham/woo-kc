@@ -1,0 +1,1 @@
+{"version":3,"file":"front.bundle.js","sources":["src/front.js"],"sourcesContent":["import './style.scss';\n\nconsole.log(`Child theme front loaded!`)\n"],"names":[],"mappings":"AAEA,OAAO,CAAC,GAAG,CAAC,CAAC,yBAAyB,CAAC"}

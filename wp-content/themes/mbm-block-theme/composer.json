@@ -1,0 +1,29 @@
+{
+    "name": "madebymunsters/wordpress-block-theme",
+    "description": "MBM block theme for Wordpress.",
+    "type": "project",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/MadeByMunstersLLC/munsters-wp-theme-core.git"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/MadeByMunstersLLC/munsters-gutenberg-support.git"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "madebymunsters\\BlockTheme\\": "src/php-lib/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "madebymunsters/munsters-wp-core-theme": "^2",
+        "madebymunsters/munsters-gutenberg-support": "^1"
+    }
+}

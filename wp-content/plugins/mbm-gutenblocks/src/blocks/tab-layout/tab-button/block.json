@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"title": "Tab Button",
+	"description": "Create interactive tab buttons to navigate and showcase different content sections.",
+	"name": "mbm/tab-button",
+	"category": "design",
+	"parent": [
+		"mbm/tab-buttons"
+	],
+	"supports": {
+		"anchor": true,
+		"align": true,
+		"ariaLabel": true,
+		"className": true,
+		"color": {
+			"background": true,
+			"gradients": false,
+			"link": true,
+			"text": true
+		},
+		"customClassName": true,
+		"layout": false,
+		"multiple": true,
+		"reusable": true,
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalFontStyle": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"interactivity": true
+	},
+	"amplify": {
+		"viewNamespace": "mbm/tabLayout/tabButton"
+	},
+	"editorScript": "mbm-gutenblocks/editor/script",
+	"editorStyle": "mbm-gutenblocks/editor/style",
+	"style": "mbm-gutenblocks/front/style"
+}

@@ -1,0 +1,12 @@
+{
+	"title": "Demo: Counter PHP Store V2",
+	"name": "demo/counter-php-store-v2",
+	"description": "",
+	"category": "design",
+	"attributes": {
+	},
+	"supports": {
+		"interactivity": true
+	},
+	"render": "file:./render.php"
+}

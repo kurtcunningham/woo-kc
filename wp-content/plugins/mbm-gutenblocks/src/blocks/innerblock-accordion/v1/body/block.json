@@ -1,0 +1,12 @@
+{
+	"title": "Accordion Content",
+	"name": "mbm/innerblock-accordion-accordion-body",
+	"category": "design",
+	"parent": [
+		"mbm/innerblock-accordion-accordion"
+	],
+	"editorScript": "mbm-gutenblocks/editor/script",
+	"viewScript": "mbm-gutenblocks/front/script",
+	"editorStyle": "mbm-gutenblocks/editor/style",
+	"style": "mbm-gutenblocks/front/style"
+}

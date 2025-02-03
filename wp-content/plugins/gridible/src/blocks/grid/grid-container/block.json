@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"title": "Gridible Layout",
+	"name": "gridible/grid-container",
+	"description": "Display content in multiple columns and rows while also controlling individual breakpoint settings.",
+	"category": "design",
+	"keywords": [
+		"grid",
+		"layout",
+		"columns"
+	],
+	"supports": {
+		"align": [ "wide", "full" ],
+		"anchor": true,
+		"color": {
+			"gradients": true,
+			"__experimentalDefaultControls": {
+				"background": true
+			}
+		},
+		"spacing": {
+			"margin": true,
+			"padding": [ "top", "bottom" ],
+			"blockGap": false,
+			"__experimentalDefaultControls": {
+				"margin": true,
+				"padding": true,
+				"blockGap": false
+			}
+		}
+	},
+	"editorScript": "gridible-blocks/editor/script",
+	"editorStyle": "gridible-blocks/editor/style",
+	"style": "gridible-blocks/front/style"
+}

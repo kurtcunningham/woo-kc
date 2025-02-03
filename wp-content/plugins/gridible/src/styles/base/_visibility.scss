@@ -1,0 +1,30 @@
+// Visibility Support Stylesheets
+// ========================================
+
+@use "sass:list";
+@use "sass:map";
+@use "../settings/variables/grid" as *;
+@use '../settings/class-names' as class-names;
+
+$visibility-breakpoints: (
+  sm:      0,
+  md:      $grid-bp-medium,
+  lg:      $grid-bp-large,
+  max:     1000 * 1000px,
+);
+
+@each $bp-key, $bp-size in $visibility-breakpoints {
+  $bp-keys: map.keys($visibility-breakpoints);
+  $curr-idx: list.index($bp-keys, $bp-key);
+
+  @if ($curr-idx != list.length($bp-keys)) {
+    $next-bp-key: list.nth($bp-keys, $curr-idx + 1);
+    $next-bp-size: map.get($visibility-breakpoints, $next-bp-key);
+
+    .#{class-names.$class-prefix}hidden--#{$bp-key} {
+      @media screen and (min-width: $bp-size) and (max-width: ($next-bp-size - 1px)) {
+        display: none !important;
+      }
+    }
+  }
+}

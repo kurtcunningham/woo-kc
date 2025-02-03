@@ -1,0 +1,44 @@
+// Spacers Mixin Settings Stylesheet
+// ========================================
+
+// Spacer Mixin
+@mixin spacer($type, $position, $size) {
+
+  @if $position == "all" {
+    @if $type == "margin" {
+      margin: $size;
+    } @else if $type == "padding" {
+      padding: $size;
+    }
+  } @else if $position == 'vertical' {
+    @if $type == "margin" {
+      margin-bottom: $size;
+      margin-top: $size;
+    } @else if $type == "padding" {
+      padding-bottom: $size;
+      padding-top: $size;
+    }
+  } @else if $position == 'horizontal' {
+    @if $type == "margin" {
+      margin-left: $size;
+      margin-right: $size;
+    } @else if $type == "padding" {
+      padding-left: $size;
+      padding-right: $size;
+    }
+  } @else {
+    #{$type}-#{$position}: $size;
+  }
+}
+
+
+@mixin spacerAuto() {
+  margin: $spacer-0 $spacer-auto;
+}
+
+// Responsive Spacer Mixin
+@mixin spacer-sizes($breakpoint, $spacer-size) {
+  @include create-mq($breakpoint, 'min') {
+    height: $spacer-size;
+  }
+}

@@ -1,0 +1,90 @@
+@use 'sass:math';
+@use '../../../../styles/settings/mixins/grid' as grid-mixins;
+@use '../../../../styles/settings/variables/grid' as grid-variables;
+
+$scroll-height: 8px;
+$scroll-width: 100%;
+$scroll-border-radius: 16px;
+$scroll-border: 2px solid #EEEEEE;
+$scroll-background: #0073AA;
+$wrapper-padding-bottom: 10px;
+
+@mixin slide-wrapper() {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  gap: grid-variables.$grid-gutter;
+  padding-bottom: $wrapper-padding-bottom;
+
+  // Scrollbar styling from: https://stackoverflow.com/a/66926531
+  &::-webkit-scrollbar:horizontal {
+    background-color: #EEEEEE;
+    border-radius: $scroll-border-radius;
+    height: $scroll-height;
+    width: $scroll-width;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: $scroll-border-radius;
+    border: $scroll-border;
+    /* should match background, can't be transparent */
+    background-color: $scroll-background;
+
+    &:hover {
+      cursor: grab !important;
+    }
+    &:active {
+      cursor: grabbing !important;
+    }
+  }
+  // This one is important.
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+}
+
+.wp-block-gridible-query-carousel-container,
+.wp-block-gridible-static-carousel-container {
+  .wp-block-post-template {
+    @include slide-wrapper();
+  }
+
+  .wp-block-gridible-static-carousel-slide,
+  .wp-block-post {
+    @include grid-mixins.grid-column-width(12, 12);
+
+    list-style: none;
+    margin-block-start: 0;
+  } 
+}
+
+.wp-block-gridible-static-carousel-container {
+  @include slide-wrapper();
+
+  > .block-list-appender {
+    position: relative;
+    margin-block-start: 0;
+    margin-left: 0;
+  }
+}
+
+.wp-block-gridible-query-carousel-container,
+.wp-block-gridible-static-carousel-container {
+  $max-column-span: grid-variables.$grid-columns;
+  $preview-devices: ('desktop', 'tablet', 'mobile');
+  $slide-per-view-options: (1, 2, 3, 4, 6, 12);
+
+  @each $device in $preview-devices {
+    @at-root .is-#{$device}-preview & {
+      @each $slides-count in $slide-per-view-options {
+        &--slides-#{$device}-#{$slides-count} {
+          .wp-block-gridible-static-carousel-slide,
+          .wp-block-post,
+          > .block-list-appender {
+            @include grid-mixins.grid-column-width(math.div($max-column-span, $slides-count), $max-column-span);
+          }
+        }
+      }
+    }
+  }
+}

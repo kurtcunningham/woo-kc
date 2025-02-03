@@ -1,0 +1,14 @@
+{
+	"title": "Icon",
+	"name": "mbm/icon",
+	"description": "Add a visual design element (Font Awesome Icon) to a group of content.",
+	"category": "common",
+	"supports": [
+		"left",
+		"center",
+		"right"
+	],
+	"editorScript": "mbm-gutenblocks/editor/script",
+	"editorStyle": "mbm-gutenblocks/editor/style",
+	"style": "mbm-gutenblocks/front/style"
+}

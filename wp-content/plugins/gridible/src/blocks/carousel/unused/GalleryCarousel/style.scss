@@ -1,0 +1,11 @@
+@import "node_modules/swiper/swiper";
+
+
+.swiper-initialized {
+  overflow-x: hidden;
+}
+
+.swiper-wrapper.is-layout-flex {
+  flex-wrap: nowrap;
+  gap: 0;
+}

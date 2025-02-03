@@ -1,0 +1,17 @@
+{
+    "name": "unrelated/amplify-root",
+    "type": "project",
+    "minimum-stability": "dev",
+    "require-dev": {
+        "automattic/vipwpcs": "dev-develop"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "scripts": {
+        "phpcs-summary": "phpcs --standard=WordPress-VIP-Go -sp --basepath=. --report=summary --ignore=wp-content/themes/mbm-block-theme/vendor wp-content/themes/mbm-block-theme/src/php-lib wp-content/plugins/mbm-amplify-team/src wp-content/plugins/mbm-npt-events/src",
+        "phpcs-live": "phpcs --standard=WordPress-VIP-Go -sa --basepath=. --ignore=vendor $@"
+    }
+}

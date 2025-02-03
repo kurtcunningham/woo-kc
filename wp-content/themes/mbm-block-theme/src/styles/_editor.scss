@@ -1,0 +1,29 @@
+// Gutenberg Editor Stylesheets & Styles
+// ========================================
+
+@import 'common';
+
+// Editor: Title
+h1.editor-post-title {
+  font-size: var(--wp--preset--font-size--charlie);
+}
+
+// Editor: Page Template Featured
+.block-editor-block-list__block.page-template-page-feature__header {
+
+  // Template: Featured Header Navigation
+  .wp-block.part-amplify-header {
+    z-index: 1;
+  }
+
+  // Template: Featured Header
+  .page-template-page-feature__header {
+    margin-bottom: 0 !important;
+  }
+
+  .wp-block.page-template-page-feature__header-image {
+    position: absolute !important;
+    top: -32px !important;
+    z-index: 0;
+  }
+}

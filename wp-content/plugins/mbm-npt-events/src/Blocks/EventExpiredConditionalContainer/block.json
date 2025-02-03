@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+	"title": "Event Content - Future",
+	"name": "mbm-npt-events/event-expiration-conditional-container",
+	"description": "Hide or show content based on the status of your event.",
+	"category": "mbm-npt-events",
+	"keywords": [
+		"event"
+	],
+	"usesContext": [
+		"postId",
+		"postType"
+	],
+	"attributes": {
+		"showMode": {
+			"type": "string",
+			"default": "only_future"
+		},
+		"tagName": {
+			"type": "string",
+			"default": "div"
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"align": true,
+		"ariaLabel": false,
+		"className": true,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": false,
+			"text": false
+		},
+		"customClassName": true,
+		"dimensions": {
+			"minHeight": true
+		},
+		"layout": true,
+		"multiple": true,
+		"reusable": true,
+		"position": {
+			"sticky": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"blockGap": true
+		},
+		"interactivity": true
+	},
+	"render": "file:./render.php"
+}

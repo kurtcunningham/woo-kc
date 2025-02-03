@@ -1,0 +1,36 @@
+// Card Mixin Settings Stylesheet
+// ========================================
+
+// Card Mixin
+@mixin card($shadow: false, $shadowDark: false) {
+
+  // Variables
+  $card-bg:             #FFFFFF;
+  $card-box-shadow-dk:  0 0 40px 0 rgba(#000000, 0.40);
+	$card-box-shadow-lt:  0 0 40px 0 rgba(205, 216, 221, 0.40);
+  $card-display:  			inline-block;
+  $card-margin:         0 0 $spacer-16;
+	$card-mxWidth:        100%;
+  $card-padding:        $spacer-32;
+  $card-position:       relative;
+  $card-width:          100%;
+
+
+  // Structure
+  background-color: $card-bg;
+  display: $card-display;
+  margin: $card-margin;
+  padding: $card-padding;
+	max-width: $card-mxWidth;
+	position: $card-position;
+  width: $card-width;
+
+  // Card Modifier
+  @if $shadow {
+    @if $shadowDark {
+      box-shadow: $card-box-shadow-dk;
+    } @else {
+      box-shadow: $card-box-shadow-lt;
+    }
+  }
+}

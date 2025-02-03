@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "mbm/card",
+	"title": "MBM Card",
+	"description": "Add a container around your content to make it stand out amongst the rest.",
+	"category": "layout",
+	"supports": {
+		"html": false,
+		"align": true,
+		"alignWide": false,
+		"color": {
+			"text": false,
+			"background": true
+		},
+		"spacing": {
+			"padding": true,
+			"__experimentalDefaultControls": {
+				"padding": true
+			}
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true,
+			"__experimentalDefaultControls": {
+				"color": true,
+				"radius": true,
+				"style": true,
+				"width": true
+			}
+		}
+	},
+	"editorScript": "mbm-gutenblocks/editor/script",
+	"viewScript": "mbm-gutenblocks/front/script",
+	"editorStyle": "mbm-gutenblocks/editor/style",
+	"style": "mbm-gutenblocks/front/style"
+}

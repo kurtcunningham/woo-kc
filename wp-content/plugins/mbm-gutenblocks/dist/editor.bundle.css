@@ -1,0 +1,28 @@
+* .block-editor-block-list__block[data-type="mbm/query-taxonomy-filter"] {
+  display: flex;
+  justify-content: space-between;
+}
+* .block-editor-block-list__block[data-type="mbm/query-taxonomy-filter"] span {
+  flex: auto;
+}
+* .block-editor-block-list__block[data-type="mbm/query-taxonomy-filter"] .block-editor-inner-blocks {
+  align-self: center;
+  flex: 0;
+}
+* .block-editor-block-list__block[data-type="mbm/query-taxonomy-filter"] .block-editor-block-list__block.wp-block-mbm-innerblock-accordion-title__icon--open {
+  margin-left: auto;
+}
+* .block-editor-block-list__block[data-type="mbm/query-taxonomy-filter"] .block-editor-block-list__layout {
+  display: flex;
+}
+* .block-editor-block-list__block[data-type="mbm/query-taxonomy-filter"] .block-editor-block-list__layout .wp-block-outermost-icon-block {
+  margin-block-start: 0;
+}
+
+* .block-editor-block-list__block[data-type="mbm/innerblock-accordion-title"] .block-editor-block-list__layout {
+  display: flex;
+  justify-content: space-between;
+}
+* .block-editor-block-list__block[data-type="mbm/innerblock-accordion-title"] .block-editor-block-list__layout .block-editor-block-list__block.wp-block-mbm-innerblock-accordion-title__icon--open {
+  margin-left: auto;
+}

@@ -1,0 +1,37 @@
+// Editor Stylesheets
+// ========================================
+
+// Imports
+// @import "../../../styles/settings/variables/grid";
+// @import "../../../styles/settings/variables/spacers";
+// @import "../../../styles/settings/mixins/grid";
+// @import "../../../styles/settings/mixins/spacers";
+
+@use "../../../styles/settings/variables/grid" as *;
+@use "../../../styles/settings/variables/spacers" as *;
+@use "../../../styles/settings/mixins/grid" as *;
+@use "../../../styles/settings/mixins/spacers" as *;
+
+
+// Columns
+.editor.col {
+  @each $modifier, $breakpoint in $grid-breakpoints {
+    @include grid-columns($modifier, $grid-columns, $breakpoint, $important: !important);
+  }
+}
+
+.editor-col {
+	min-height: 35px;
+}
+
+.editor-col .wp-block {
+	margin-left: inherit;
+	margin-right: inherit;
+}
+
+// Columns Offfset
+.offset {
+  @each $modifier, $breakpoint in $grid-breakpoints {
+    @include grid-offset($modifier, $grid-columns, $breakpoint, $important: !important);
+  }
+}

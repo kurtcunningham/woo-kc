@@ -1,0 +1,32 @@
+// Typography Base Stylesheets
+// =============================================
+
+// Variables
+$html-textSizeAdjust:             100%;
+$html-textRender:                 optimizeLegibility;
+$html-textSmooth:                 antialiased;
+
+
+// Structure
+html {
+  -ms-text-size-adjust: $html-textSizeAdjust;
+  -webkit-text-size-adjust: $html-textSizeAdjust;
+}
+
+body {
+  text-rendering: $html-textRender;
+  -webkit-font-smoothing: $html-textSmooth;
+}
+
+p > a {
+  font-weight: inherit;
+}
+
+a {
+  font-weight: inherit;
+  transition: color 0.35s ease;
+}
+
+a:where(:not(.wp-element-button)) {
+  color: inherit;
+}

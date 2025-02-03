@@ -1,0 +1,26 @@
+// File Core Block Stylesheets
+// =============================================
+
+// Variables
+$file-align:                        center;
+$file-display:                      flex;
+
+$file-button-fSize:                 var(--wp--preset--font-size--foxtrot);
+$file-button-fWeight:               bold;
+$file-button-marLeft:               auto !important;
+
+
+// Structure
+.wp-block-file {
+  align-items: $file-align;
+  display: $file-display;
+
+  a {
+    font-size: $file-button-fSize;
+  }
+
+  &__button {
+    font-weight: $file-button-fWeight;
+    margin-left: $file-button-marLeft;
+  }
+}

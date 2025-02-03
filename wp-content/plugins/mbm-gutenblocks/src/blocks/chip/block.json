@@ -1,0 +1,10 @@
+{
+	"title": "MBM Chip",
+	"name": "mbm/chip",
+	"description": "Used when you want to show a small, circle image next to a line or two of text.",
+	"category": "common",
+	"editorScript": "mbm-gutenblocks/editor/script",
+	"viewScript": "mbm-gutenblocks/front/script",
+	"editorStyle": "mbm-gutenblocks/editor/style",
+	"style": "mbm-gutenblocks/front/style"
+}

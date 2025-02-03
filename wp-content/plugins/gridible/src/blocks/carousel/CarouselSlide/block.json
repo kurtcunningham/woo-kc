@@ -1,0 +1,56 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"title": "Carousel Slide",
+	"name": "gridible/static-carousel-slide",
+	"parent": [
+		"gridible/static-carousel-container"
+	],
+	"description": "Add images, text, or content to be featured in your carousel.",
+	"category": "design",
+	"attributes": {},
+	"supports": {
+		"anchor": true,
+		"align": true,
+		"ariaLabel": false,
+		"className": true,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": false,
+			"text": false
+		},
+		"customClassName": true,
+		"dimensions": {
+			"minHeight": true
+		},
+		"layout": true,
+		"multiple": true,
+		"reusable": true,
+		"position": {
+			"sticky": false
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"blockGap": false
+		},
+		"typography": false,
+		"interactivity": true,
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true,
+			"__experimentalDefaultControls": {
+				"color": true,
+				"radius": true,
+				"style": true,
+				"width": true
+			}
+		}
+	},
+	"editorScript": "gridible-blocks/editor/script",
+	"editorStyle": "gridible-blocks/editor/style",
+	"style": "gridible-blocks/front/style"
+}

@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"title": "Query Filter Container",
+	"name": "mbm/query-filter-container",
+	"description": "Display your query filter form inline",
+	"category": "design",
+	"attributes": {},
+	"ancestor": [
+		"core/query"
+	],
+	"usesContext": [
+		"query",
+		"queryId"
+	],
+	"supports": {
+		"anchor": true,
+		"align": true,
+		"ariaLabel": false,
+		"className": true,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": false,
+			"text": false
+		},
+		"customClassName": true,
+		"dimensions": {
+			"minHeight": false
+		},
+		"layout": true,
+		"multiple": true,
+		"reusable": true,
+		"position": {
+			"sticky": false
+		},
+    "spacing": {
+        "margin": true,
+        "padding": true,
+        "blockGap": false
+    },
+		"interactivity": true
+	},
+	"render": "file:./render.php",
+	"editorScript": "mbm-gutenblocks/editor/script",
+	"editorStyle": "mbm-gutenblocks/editor/style",
+	"style": "mbm-gutenblocks/front/style"
+}

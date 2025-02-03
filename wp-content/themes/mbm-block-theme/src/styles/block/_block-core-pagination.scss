@@ -1,0 +1,71 @@
+// Pagination Block Stylesheets
+// =============================================
+
+// Variables
+$pagination-display:              flex;
+$pagination-gap:                  24px;
+
+$pagination-num-flex:             auto;
+$pagination-num-jContent:         center;
+$pagination-num-jContentAlt:      flex-end;
+$pagination-num-opHov:            0.5;
+$pagination-num-trans:            all 0.35s ease;
+$pagination-num-size:             48px;
+
+$pagination-action-flex:          1;
+
+$pagination-actionNxt-tAlign:     right;
+
+// Structure
+.wp-block-query-pagination {
+  gap: $pagination-gap !important;
+
+  // Pagination - Pages
+  &-numbers {
+    display: $pagination-display;
+    flex: $pagination-num-flex;
+    gap: $pagination-gap;
+    justify-content: $pagination-num-jContentAlt;
+
+    .page-numbers {
+      align-items: $pagination-num-jContent;
+      display: $pagination-display;
+      height: $pagination-num-size;
+      justify-content: $pagination-num-jContent;
+      transition: $pagination-num-trans;
+      width: $pagination-num-size;
+
+      &.current {
+        color: var(--wp--preset--color--white-base);
+        background-color: var(--wp--preset--color--primary-1);
+      }
+
+      &:hover:not(.current) {
+        opacity: $pagination-num-opHov;
+      }
+    }
+  }
+
+  &-previous,
+  &-next {
+    flex: $pagination-action-flex;
+    transition: $pagination-num-trans;
+
+    &:hover {
+      opacity: $pagination-num-opHov;
+    }
+  }
+
+  &-previous + &-numbers {
+    justify-content: center;
+  }
+
+  &-next + &-numbers,
+  & > &-numbers:last-child  {
+    justify-content: flex-start;
+  }
+
+  &-next {
+    text-align: $pagination-actionNxt-tAlign;
+  }
+}

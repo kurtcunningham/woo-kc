@@ -1,0 +1,29 @@
+// Spacer Block Stylesheet
+// ========================================
+
+@use "sass:map";
+@use '../settings/variables/spacers' as *;
+@use '../settings/variables/grid' as *;
+@use '../settings/mixins/grid' as *;
+@use '../settings/class-names' as class-names;
+
+// Structure
+@each $modifier, $breakpoint in $grid-breakpoints {
+	@include create-mq($breakpoint, 'min') {
+		@if($breakpoint == 0) {
+			@each $size, $keys in $spacer-values {
+        $size-value:  map.get($keys, value);
+				.#{class-names.$class-prefix}spacer__#{$size} {
+          height: $size-value;
+        }
+      }
+    } @else {
+			@each $size, $keys in $spacer-values {
+        $size-value:  map.get($keys, value);
+				.#{class-names.$class-prefix}spacer__#{$modifier}-#{$size} {
+          height: $size-value;
+        }
+      }
+    }
+  }
+}

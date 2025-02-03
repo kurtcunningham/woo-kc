@@ -1,0 +1,62 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+	"name": "gridible/container",
+	"version": "1.2.0",
+	"title": "Gridible Container",
+	"category": "design",
+	"description": "Restrict the max width of all child blocks to create beautiful responsive designs.",
+	"keywords": [ "container", "wrapper", "grid" ],
+  "supports": {
+		"__experimentalOnEnter": true,
+		"__experimentalOnMerge": true,
+		"__experimentalSettings": true,
+		"align": [ "wide", "full" ],
+		"anchor": true,
+		"ariaLabel": true,
+		"html": false,
+		"background": {
+			"backgroundImage": true,
+			"backgroundSize": true,
+			"__experimentalDefaultControls": {
+				"backgroundImage": true
+			}
+		},
+		"color": {
+			"gradients": true,
+			"__experimentalDefaultControls": {
+				"background": true
+			}
+		},
+		"dimensions": {
+			"minHeight": true
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true,
+			"__experimentalDefaultControls": {
+				"color": true,
+				"radius": true,
+				"style": true,
+				"width": true
+			}
+		},
+		"spacing": {
+			"margin": false,
+			"padding": [ "top", "bottom" ],
+			"blockGap": false,
+			"__experimentalDefaultControls": {
+				"padding": true,
+				"blockGap": true
+			}
+		},
+		"layout": {
+			"allowSizingOnChildren": true
+		}
+	},
+	"editorScript": "gridible-blocks/editor/script",
+	"editorStyle": "gridible-blocks/editor/style",
+	"style": "gridible-blocks/front/style"
+}

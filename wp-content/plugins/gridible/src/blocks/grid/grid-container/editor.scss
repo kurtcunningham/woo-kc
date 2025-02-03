@@ -1,0 +1,42 @@
+// Editor Stylesheets
+// ========================================
+
+// Weakly set box sizing on all blocks on the editor screen.
+* {
+	box-sizing: border-box;
+}
+
+// Global Styles
+.block-editor-inner-blocks {
+	width: 100%;
+}
+
+.block-list-appender {
+	margin-left: 32px;
+  width: 100%;
+}
+
+.wp-block-gridible-grid-column {
+	padding: 0 16px;
+}
+
+.block-editor-page .wp-block-gridible-grid-container {
+	margin: 0 auto;
+	width: calc(100% - 43px);
+}
+
+div[aria-label="Block: Gridible Grid"].wp-block {
+	max-width: 100%;
+}
+
+// Gridible Editor Styles
+.gridible-fieldset__group {
+	display: flex;
+	gap: 16px;
+	width: 100%;
+
+	.components-base-control {
+		flex: 1;
+		margin-bottom: 0;
+	}
+}

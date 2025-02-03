@@ -1,0 +1,199 @@
+# TODO: These image versions should be kept up to date to match whatever site
+#   host is.
+#   For WP Engine, details can be found here: https://wpengine.com/support/platform-settings/
+
+services:
+  db:
+    platform: linux/amd64
+    image: mysql:8.0
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./mysql.cnf:/etc/mysql/conf.d/my.cnf
+    ports:
+      - "13306:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+  wordpress:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: ./wordpress.Dockerfile
+      args:
+        CUSTOM_THEME_DIR: $CUSTOM_THEME_DIR
+    env_file: .env
+    depends_on:
+      - db
+    volumes:
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+      - ./xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+      - wp_data:/var/www/html
+      - ./wp-content:/var/www/html/wp-content
+    ports:
+      - "80:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+
+      # Silence root user warning in WP CLI - https://github.com/wp-cli/wp-cli/issues/4548#issuecomment-2067988236
+      WP_CLI_ALLOW_ROOT: 1
+      
+      # Uncomment the following line to enable a custom table prefix.
+      # Custom table prefixes can improve WP security.
+      # WORDPRESS_TABLE_PREFIX: wp_kmuz_
+
+      # Uncomment the following line to enable WordPress and Twig debugging.
+      WORDPRESS_DEBUG: 1
+
+      WORDPRESS_CONFIG_EXTRA: |
+        /*
+          Prevent automatic WP updates. This ensures the local environment
+          stays in sync with production environments.
+        */
+        define( 'WP_AUTO_UPDATE_CORE', false );
+        
+        // Have WP serve debug versions of web assets (https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/#script_debug)
+        define( 'SCRIPT_DEBUG', true );
+
+
+      #   /* 
+      #     Multisite - step 1 
+      #     Always leave this line enabled for multisite.
+      #   */
+      #   define( 'WP_ALLOW_MULTISITE', true );
+
+      #   /* 
+      #     Multisite - step 2 
+      #     Only enable the following lines after initial multisite install.
+      #   */
+      #   define( 'MULTISITE', true );
+      #   define( 'SUBDOMAIN_INSTALL', true );
+      #   define( 'DOMAIN_CURRENT_SITE', $$_SERVER['HTTP_HOST'] );
+      #   define( 'PATH_CURRENT_SITE', '/' );
+      #   // Support multiple TLDs for sub-sites
+      #   define('COOKIE_DOMAIN', '');
+      #   // Disable sign-up redirects
+      #   define('NOBLOGREDIRECT', 'http://example.test/');
+
+  phpmyadmin:
+    platform: linux/amd64
+    image: phpmyadmin/phpmyadmin
+    depends_on:
+      - db
+    ports:
+      - "8888:80"
+    volumes:
+      - ./uploads.ini:/usr/local/etc/php/conf.d/php-phpmyadmin.ini
+    environment:
+      PMA_HOST: db
+      UPLOAD_LIMIT: 1024M
+      MEMORY_LIMIT: 1024M
+      MAX_EXECUTION_TIME: 1800
+
+  builder:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: ./builder.Dockerfile
+      args:
+        COPY_ROOT: ./wp-content/themes/${CUSTOM_THEME_DIR}
+        TARGET_DIR_NAME: ${CUSTOM_THEME_DIR}
+    env_file: .env
+    volumes:
+      - ./wp-content/themes/${CUSTOM_THEME_DIR}:/build/${CUSTOM_THEME_DIR}:delegated
+      - /build/${CUSTOM_THEME_DIR}/node_modules
+    environment:
+      - SHELL=/bin/bash
+    command: "npm run start"
+
+  # This doesn't need to be enabled unless you're using a child theme.
+  child_builder:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: ./builder.Dockerfile
+      args:
+        COPY_ROOT: ./wp-content/themes/${CHILD_THEME_DIR}
+        TARGET_DIR_NAME: ${CHILD_THEME_DIR}
+    env_file: .env
+    volumes:
+      - ./wp-content/themes/${CHILD_THEME_DIR}:/build/${CHILD_THEME_DIR}:delegated
+      - /build/${CHILD_THEME_DIR}/node_modules
+    environment:
+      - SHELL=/bin/bash
+    command: "npm run start"
+
+  # This doesn't need to be enabled unless you're using a customization plugin.
+  custom_plugin_builder:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: ./builder.Dockerfile
+      args:
+        COPY_ROOT: ./wp-content/plugins/${CUSTOMIZATION_PLUGIN_DIR}
+        TARGET_DIR_NAME: ${CUSTOMIZATION_PLUGIN_DIR}
+    env_file: .env
+    volumes:
+      - ./wp-content/plugins/${CUSTOMIZATION_PLUGIN_DIR}:/build/${CUSTOMIZATION_PLUGIN_DIR}:delegated
+      - /build/${CUSTOMIZATION_PLUGIN_DIR}/node_modules
+    environment:
+      - SHELL=/bin/bash
+    command: "npm run start"
+  
+  events_builder:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: ./builder.Dockerfile
+      args:
+        COPY_ROOT: ./wp-content/plugins/${EVENTS_PLUGIN_DIR}
+        TARGET_DIR_NAME: ${EVENTS_PLUGIN_DIR}
+    env_file: .env
+    volumes:
+      - ./wp-content/plugins/${EVENTS_PLUGIN_DIR}:/build/${EVENTS_PLUGIN_DIR}:delegated
+      - /build/${EVENTS_PLUGIN_DIR}/node_modules
+    environment:
+      - SHELL=/bin/bash
+    command: "npm run start"
+  
+  team_builder:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: ./builder.Dockerfile
+      args:
+        COPY_ROOT: ./wp-content/plugins/${TEAM_PLUGIN_DIR}
+        TARGET_DIR_NAME: ${TEAM_PLUGIN_DIR}
+    env_file: .env
+    volumes:
+      - ./wp-content/plugins/${TEAM_PLUGIN_DIR}:/build/${TEAM_PLUGIN_DIR}:delegated
+      - /build/${TEAM_PLUGIN_DIR}/node_modules
+    environment:
+      - SHELL=/bin/bash
+    command: "npm run start"
+
+  phpcs:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: ./phpcs.Dockerfile
+      args:
+        COPY_ROOT: ./
+        # TARGET_DIR_NAME: wordpress
+    env_file: .env
+    volumes:
+      - ./:/build:delegated
+    environment:
+      - SHELL=/bin/bash
+    command: "composer run phpcs-summary"
+
+volumes:
+  db_data: {}
+  wp_data: {}

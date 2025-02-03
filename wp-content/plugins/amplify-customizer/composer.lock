@@ -1,0 +1,47 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "d21adcc93a2dfb3d74baf8ca025d9c53",
+    "packages": [
+        {
+            "name": "madebymunsters/munsters-gutenberg-support",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:MadeByMunstersLLC/munsters-gutenberg-support.git",
+                "reference": "25297d38cc435a9441844d80086f5fe748c6e751"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MadeByMunstersLLC/munsters-gutenberg-support/zipball/25297d38cc435a9441844d80086f5fe748c6e751",
+                "reference": "25297d38cc435a9441844d80086f5fe748c6e751",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Madebymunsters\\Gutenberg\\": "lib"
+                }
+            },
+            "description": "Support for Munsters Gutenberg blocks",
+            "homepage": "https://madebymunsters.com",
+            "support": {
+                "source": "https://github.com/MadeByMunstersLLC/munsters-gutenberg-support/tree/1.0.1",
+                "issues": "https://github.com/MadeByMunstersLLC/munsters-gutenberg-support/issues"
+            },
+            "time": "2024-03-26T00:41:05+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
+}

@@ -1,0 +1,66 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"title": "Query Taxonomy Filter",
+	"name": "mbm/query-taxonomy-filter",
+	"description": "Incorporate a taxonomy into your filter query form to enable users to retrieve specific content.",
+	"category": "design",
+	"attributes": {
+		"selection": {
+			"type": "string",
+			"default": "multiple"
+		},
+		"taxonomySlug": {
+			"type": "string"
+		}
+	},
+	"ancestor": [
+		"mbm/query-filter-container"
+	],
+	"usesContext": [
+		"query",
+		"queryId"
+	],
+	"supports": {
+		"anchor": true,
+		"align": true,
+		"ariaLabel": false,
+		"className": true,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": true,
+			"text": true
+		},
+		"customClassName": true,
+		"layout": false,
+		"multiple": true,
+		"reusable": true,
+    "spacing": {
+        "padding": true
+    },
+		"typography": {
+			"fontSize": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalTextTransform": true
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true,
+			"__experimentalDefaultControls": {
+				"color": true,
+				"radius": true,
+				"style": true,
+				"width": true
+			}
+		},
+		"interactivity": true
+	},
+	"render": "file:./render.php",
+	"editorScript": "mbm-gutenblocks/editor/script",
+	"editorStyle": "mbm-gutenblocks/editor/style",
+	"style": "mbm-gutenblocks/front/style"
+}

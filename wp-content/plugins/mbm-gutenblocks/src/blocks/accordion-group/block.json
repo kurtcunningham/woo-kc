@@ -1,0 +1,48 @@
+{
+	"title": "Accordion Group",
+	"name": "mbm/accordion-group",
+	"description": "",
+	"category": "design",
+	"attributes": {
+		"isMutuallyExclusiveOpen": {
+			"type": "boolean",
+			"default": true
+		},
+		"clientId": {
+			"type": "string",
+			"default": null
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"align": true,
+		"ariaLabel": false,
+		"className": true,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": false,
+			"text": false
+		},
+		"customClassName": true,
+		"dimensions": {
+			"minHeight": true
+		},
+		"layout": true,
+		"multiple": true,
+		"reusable": true,
+		"position": {
+			"sticky": true
+		},
+    "spacing": {
+        "margin": true,
+        "padding": true,
+        "blockGap": true
+    },
+		"typography": null,
+		"interactivity": true
+	},
+	"editorScript": "mbm-gutenblocks/editor/script",
+	"editorStyle": "mbm-gutenblocks/editor/style",
+	"style": "mbm-gutenblocks/front/style"
+}

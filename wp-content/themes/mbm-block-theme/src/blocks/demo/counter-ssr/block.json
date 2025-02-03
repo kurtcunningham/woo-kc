@@ -1,0 +1,12 @@
+{
+	"title": "Demo: Counter SSR",
+	"name": "demo/counter-ssr",
+	"description": "",
+	"category": "design",
+	"attributes": {
+	},
+	"supports": {
+		"interactivity": true
+	},
+	"render": "file:./render.php"
+}

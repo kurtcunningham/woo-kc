@@ -1,0 +1,22 @@
+{
+  "name": "madebymunsters/munsters-wp-core-theme",
+  "type": "library",
+  "description": "Core code shared between Munsters WordPress themes.",
+  "homepage": "https://madebymunsters.com",
+  "autoload": {
+    "psr-4": {
+      "mbm\\": "lib"
+    }
+  },
+  "require": {
+    "haydenpierce/class-finder": "^0.4.3"
+  },
+  "require-dev": {
+    "timber/timber": "^1.20"
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  }
+}

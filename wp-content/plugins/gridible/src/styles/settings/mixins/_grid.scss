@@ -1,0 +1,112 @@
+// Grid Mixins Stylesheet
+// ========================================
+
+@use "sass:math";
+@use "../variables/grid" as grid-vars;
+
+// Media Query
+@mixin create-mq($breakpoint, $min-or-max) {
+  @if($breakpoint == 0) {
+    @content;
+  } @else {
+    @media screen and (#{$min-or-max}-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+@function col-class-name($breakpoint, $modifier, $i) {
+  $col-class-name: if(
+    $breakpoint == 0,
+    "&__#{$i}",
+    "&__#{$modifier}-#{$i}"
+  );
+
+  @return $col-class-name;
+}
+
+  // Column width calculations/algorithm based on these notes:
+  //   100% = N*Cols + (N-1)*Guttters
+  //   Widths:
+  //     1 Col: 1C
+  //     2 Col: 2C + G
+  //     3 Col: 3C + 2G
+  //   If N=12
+  //   100 = 12C + 11G
+  //   G = 32px
+  //   100% = 12C + 11*32px
+  //   C = (100% - 11*32px) / 12
+  //   C = (100% - 352px) / 12
+@function gutter-adjusted-col-width(
+  $column-span, 
+  $max-column-span, 
+  $gutter-span-adjustment: -1
+) {
+  $is-full-width: $column-span == $max-column-span;
+  $col-width-percent: math.div(100, math.div($max-column-span, $column-span) ) * 1%;
+
+  $col-width-gutter-adjusted: 100%;
+  @if not $is-full-width {
+    $spanned-gutter-size: ($column-span + $gutter-span-adjustment) * grid-vars.$grid-gutter;
+    $column-span-fraction: math.div($max-column-span, $column-span);
+    $size-calc-string: "((100% - #{($max-column-span - 1) * grid-vars.$grid-gutter}) / #{$column-span-fraction}) + #{$spanned-gutter-size}";
+    $col-width-gutter-adjusted: calc(#{$size-calc-string});
+  }
+
+  @return $col-width-gutter-adjusted;
+}
+
+@mixin grid-column-width($column-span, $max-column-span) {
+  $col-width-gutter-adjusted: gutter-adjusted-col-width($column-span, $max-column-span, -1);
+  flex-basis: $col-width-gutter-adjusted;
+  max-width: $col-width-gutter-adjusted;
+  min-width: $col-width-gutter-adjusted;
+}
+
+// Columns Span
+@mixin grid-columns($modifier, $grid-cols, $breakpoint, $important: null) {
+  @include create-mq($breakpoint, 'min') {
+    @for $i from 1 through $grid-cols {
+      $col-class-name: col-class-name($breakpoint, $modifier, $i);
+      
+      #{$col-class-name} {
+        @include grid-column-width($i, $grid-cols);
+        $col-width-gutter-adjusted: gutter-adjusted-col-width($i, $grid-cols, -1);
+
+        @if($important) {
+          width: $col-width-gutter-adjusted $important;
+          margin: 28px 0;
+        }
+      }
+    }
+  }
+}
+
+// Column Offset
+@mixin create-breakpoint-offset($modifier, $grid-cols, $breakpoint, $important: null) {
+  @for $i from 1 through $grid-cols {
+    $col-width-gutter-adjusted: gutter-adjusted-col-width($i, $grid-cols, 0);
+    $col-class-name: col-class-name($breakpoint, $modifier, $i);
+
+    #{$col-class-name} {
+      $offset-width: math.div(100, math.div($grid-cols, $i) ) * 1%;
+      
+      margin-left: $col-width-gutter-adjusted $important;
+    }
+  }
+}
+@mixin grid-offset($modifier, $grid-cols, $breakpoint, $important: null) {
+  @if $breakpoint == grid-vars.$grid-bp-large {
+    @media screen and (min-width: grid-vars.$grid-bp-large) {
+      @include create-breakpoint-offset($modifier, $grid-cols, $breakpoint, $important);
+    }
+  } @else if $breakpoint == grid-vars.$grid-bp-medium {
+    @media screen and (min-width: grid-vars.$grid-bp-medium) and (max-width: (grid-vars.$grid-bp-large - 1px)) {
+      @include create-breakpoint-offset($modifier, $grid-cols, $breakpoint, $important);
+    }
+  } @else {
+    @media screen and (min-width: 0) and (max-width: (grid-vars.$grid-bp-medium - 1px)) {
+      @include create-breakpoint-offset($modifier, $grid-cols, $breakpoint, $important);
+    }
+  }
+}

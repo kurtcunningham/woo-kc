@@ -1,0 +1,33 @@
+{
+  "name": "amp-child-theme",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "rollup --config --watch",
+    "build": "rollup --config",
+    "clean": "rimraf editor.* front.* style.css theme.json $CUSTOM_THEME_DIR*.zip",
+    "archive": "./build-archive.sh",
+    "redist": "npm run clean && npm run build && npm run archive"
+  },
+  "dependencies": {
+    "classnames": "^2.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.6",
+    "@babel/preset-env": "^7.23.6",
+    "@babel/preset-react": "^7.23.3",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.5",
+    "@rollup/plugin-terser": "^0.4.4",
+    "babel-loader": "^9.1.3",
+    "bourbon": "^7.3.0",
+    "css-loader": "^6.8.1",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.9.0",
+    "rollup-plugin-external-globals": "^0.9.1",
+    "rollup-plugin-sass": "^1.13.2"
+  }
+}

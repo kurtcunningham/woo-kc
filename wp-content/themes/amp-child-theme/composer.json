@@ -1,0 +1,29 @@
+{
+    "name": "unrelated/amp-child-theme",
+    "description": "Amplify block child theme for Wordpress.",
+    "type": "project",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/MadeByMunstersLLC/munsters-wp-theme-core.git"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/MadeByMunstersLLC/munsters-gutenberg-support.git"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Unrelated\\Amplify\\ChildTheme\\": "src/php-lib/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "madebymunsters/munsters-wp-core-theme": "^2",
+        "madebymunsters/munsters-gutenberg-support": "^1"
+    }
+}

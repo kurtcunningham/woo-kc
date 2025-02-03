@@ -1,0 +1,16 @@
+{
+  "name": "madebymunsters/munsters-gutenberg-support",
+  "type": "library",
+  "description": "Support for Munsters Gutenberg blocks",
+  "homepage": "https://madebymunsters.com",
+  "autoload": {
+    "psr-4": {
+      "Madebymunsters\\Gutenberg\\": "lib"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  }
+}

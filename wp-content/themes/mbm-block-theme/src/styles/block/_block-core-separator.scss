@@ -1,0 +1,24 @@
+// Separator Block Stylesheets
+// =============================================
+
+// Variables
+$separator-borderBottomStyle:     1px solid;
+$separator-borderTopStyle:        none;
+$separator-margin:                12px;
+
+
+// Structure
+.wp-block-separator {
+  border-bottom: $separator-borderBottomStyle;
+  border-top: $separator-borderTopStyle;
+  margin-bottom: $separator-margin;
+  margin-top: $separator-margin;
+
+  // Separator: Vertical
+  &.is-style-vertical {
+    border: $separator-borderTopStyle;
+    border-left: $separator-borderBottomStyle;
+    height: 100%;
+    width: 0;
+  }
+}

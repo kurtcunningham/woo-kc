@@ -1,0 +1,42 @@
+// Media Core Block Stylesheets
+// =============================================
+
+// Variables
+$image-fullWidth-width:                 100% !important;
+
+$image-pinnedFig-negOffset:             calc(-5% + (#{$siteGlobal-paddingHorz} * -1));
+$image-pinnedFig-width:                 calc(105% + #{$siteGlobal-paddingHorz});
+
+$image-pinnedImg-width:                 100%;
+
+// Structure
+.wp-block-image {
+
+  // Media - Full Width
+  &.is-style-full img {
+    width: $image-fullWidth-width;
+  }
+
+  // Media - Modifers: Pinned
+  &.is-image-pinned {
+
+    // Pinned Alignment
+    &.alignleft {
+      @media screen and (min-width: $breakpoint-medium) {
+        margin-left: $image-pinnedFig-negOffset; 
+        width: $image-pinnedFig-width; 
+      }
+    }
+
+    &.alignright {
+      @media screen and (min-width: $breakpoint-medium) {
+        margin-right: $image-pinnedFig-negOffset; 
+        width: $image-pinnedFig-width; 
+      }
+    }
+
+    img {
+      width: $image-pinnedImg-width;
+    }
+  }
+}

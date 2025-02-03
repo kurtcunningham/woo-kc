@@ -1,0 +1,21 @@
+/*!
+ * Theme Name: Amplify Child
+ * Template: mbm-block-theme
+ * Description: Client-specific customizations for Unrelated's Amplify framework.
+ * Tags: amplify
+ * Author URI: https://unrelated.co/
+ * Author: Unrelated
+ * Version: 1.0.1
+ * Requires at least: 6.6
+ * Tested up to: 6.6
+ * Requires PHP: 8.2
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: ampchildtheme
+*/
+
+// Vendor
+// @import "node_modules/bourbon/core/bourbon";
+
+// Theme Styles
+@import "styles/front";

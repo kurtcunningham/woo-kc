@@ -1,0 +1,14 @@
+version: '3.3'
+
+# TODO: These image versions should be kept up to date to match whatever site
+#   host is.
+#   For WP Engine, details can be found here: https://wpengine.com/support/platform-settings/
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: ./php.Dockerfile
+    volumes:
+      # - ./xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+      - .:/app

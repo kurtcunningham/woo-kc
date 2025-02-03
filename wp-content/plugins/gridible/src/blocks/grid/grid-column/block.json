@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"title": "Gridible Column",
+	"name": "gridible/grid-column",
+	"description": "Holds content, but in a pretty grid format.",
+	"category": "design",
+	"keywords": [
+		"grid",
+		"column"
+	],
+	"parent": [
+		"gridible/grid-container"
+	],
+	"editorScript": "gridible-blocks/editor/script",
+	"editorStyle": "gridible-blocks/editor/style",
+	"style": "gridible-blocks/front/style"
+}

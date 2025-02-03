@@ -1,0 +1,83 @@
+.settings-widget {
+  h1,h2,h3 {
+    font-weight: 500 !important;
+  }
+  h1 {
+    padding: 0;
+    margin: 10px 0;
+    font-size: 2.5em;
+  }
+
+  h2, h4 {
+    margin-bottom: 0.75em !important;
+  }
+
+  h4 {
+    font-size: 1.2em;
+  }
+
+  ul,
+  p {
+    font-size: .95rem;
+  }
+
+  pre {
+    padding: 20px;
+    background: #f0f0f1;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .video-caption {
+    margin-top: .3em;
+    font-size: .9rem;
+  }
+
+  &.is-full-row {
+    grid-column: span 2;
+  }
+
+  &.is-header-hidden {
+    margin-top: -1px !important;
+
+    .inside {
+      padding: 12px;
+    }
+
+    @media (min-width: 1080px) {
+      margin: 0;
+    }
+  }
+
+  .postbox-header {
+    .hndle {
+      cursor: pointer;
+    }
+  }
+
+  .inside {
+    margin: 0;
+  }
+
+  .postbox-footer {
+    padding: 12px;
+    border-top: 1px solid #f0f0f1;
+  }
+
+  &.closed .postbox-footer {
+    display: none;
+  }
+
+  .components-notice {
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 8px;
+    margin-right: 0;
+    margin-left: 0;
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,32 @@
+// Query Block Stylesheets
+// =============================================
+
+// Variables
+$query-layoutGrid-gap:                      var(--wp--preset--spacing--50);
+$query-layoutGrid-gridTempColsSm:           repeat(1, minmax(0, 1fr));
+$query-layoutGrid-gridTempColsMd:           repeat(2, minmax(0, 1fr));
+$query-layoutGrid-gridTempColsLg:           repeat(4, minmax(0, 1fr));
+
+// Structure
+.wp-block-query {
+
+  // Query - Grid Layout
+  .wp-block-post-template-is-layout-grid {
+    gap: $query-layoutGrid-gap;
+    grid-template-columns: $query-layoutGrid-gridTempColsSm;
+
+    @media screen and (min-width: $breakpoint-medium) {
+      grid-template-columns: $query-layoutGrid-gridTempColsMd;
+    }
+
+    // Query - Grid Layout Count
+    @for $i from 1 through 16 {
+      
+      @media screen and (min-width: $breakpoint-large) and (max-width: 1000000000px) {
+        &.columns-#{$i} {
+          grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+        }
+      }
+    }
+  }
+}

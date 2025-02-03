@@ -1,0 +1,193 @@
+@import url("https://use.typekit.net/kvv0zcq.css");
+
+:root {
+  --gridible--preset--color--black:           #000000;
+  --gridible--preset--color--purple:          #FBF8F4;
+  --gridible--preset--color--tan:             #FBF8F4;
+  --gridible--preset--color--white:           #FFFFFF;
+
+  --gridible--preset--font-family--display:   'neue-haas-grotesk-display', 'Helvetica', 'Sans Serif';
+  --gridible--preset--font-family--text:      'neue-haas-grotesk-text', 'Helvetica', 'Sans Serif';
+}
+
+.settings_page_gridible_settings #wpwrap {
+  background-color: var(--gridible--preset--color--tan);
+  padding-left: 0;
+}
+.settings_page_gridible_settings #wpcontent {
+  padding-left: 0;
+}
+.settings_page_gridible_settings #wpbody {
+  height: 100vh;
+}
+.settings_page_gridible_settings input:not([type="submit"]) {
+  border: 1px solid var(--gridible--preset--color--black);
+  border-radius: 8px;
+  font-family: var(--gridible--preset--font-family--text);
+  padding: 8px 12px;
+  transition: border-color 0.35s ease;
+  width: 100%;
+}
+.settings_page_gridible_settings input:not([type="submit"]):hover,
+.settings_page_gridible_settings input:not([type="submit"]):active,
+.settings_page_gridible_settings input:not([type="submit"]):focus {
+  border-color: #645EFA;
+}
+.settings_page_gridible_settings input[type="submit"],
+.settings_page_gridible_settings .button.button-primary {
+  background-color: #7C0E68;
+  border: none;
+  border-radius: 12px;
+  font-family: var(--gridible--preset--font-family--text);
+  font-weight: 700;
+  padding: 8px 24px;
+  transition: all 0.35s ease;
+}
+.settings_page_gridible_settings input[type="submit"]:hover,
+.settings_page_gridible_settings .button.button-primary:hover {
+  background-color: #530645;
+}
+.settings_page_gridible_settings .update-nag {
+  display: none;
+}
+.gridible-settings__header {
+  background-color: #7C0E68;
+  padding: 16px 4vw;
+  position: relative;
+  z-index: 2;
+}
+.gridible-settings__header-row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.gridible-settings__header-right a {
+  background-color: var(--gridible--preset--color--white);
+  border: 1px solid var(--gridible--preset--color--black);
+  border-radius: 12px;
+  color: var(--gridible--preset--color--black);
+  font-family: var(--gridible--preset--font-family--text);
+  font-weight: 700;
+  display: block;
+  padding: 12px 32px;
+  transition: all 0.35s ease;
+  text-decoration: none;
+}
+.gridible-settings__header-right a:hover {
+  background-color: var(--gridible--preset--color--black);
+  color: var(--gridible--preset--color--white);
+}
+.gridible-settings__body {
+  padding: 48px 4vw;
+}
+.gridible-settings__section-header {
+  display: block;
+  margin-bottom: 24px;
+}
+.gridible-settings__section {
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+.gridible-settings__section-header__title {
+  font-family: var(--gridible--preset--font-family--display);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0;
+}
+.gridible-settings__section-card {
+  background: var(--gridible--preset--color--white);
+  border: 1px solid var(--gridible--preset--color--black);
+  border-radius: 24px;
+}
+.gridible-settings__section-card h2 {
+  border-bottom: 1px solid var(--gridible--preset--color--black);
+  font-family: var(--gridible--preset--font-family--display);
+  font-weight: 700;
+  margin: 0;
+  padding: 12px 24px;
+}
+.gridible-settings__section-card .form-table {
+  display: flex;
+  padding: 12px 24px;
+}
+.gridible-settings__section-card .form-table tbody {
+  width: 100%;
+}
+.gridible-settings__section-card .form-table tr {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+.gridible-settings__section-card .form-table th,
+.gridible-settings__section-card .form-table td {
+  padding: 0;
+}
+.gridible-settings__section-card .form-table th {
+  font-family: var(--gridible--preset--font-family--text);
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+.gridible-settings__section-card .submit {
+  margin: 0;
+  margin-left: auto;
+  padding: 0 24px 12px;
+  text-align: right;
+}
+.gridible-settings__bg-grid {
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  pointer-events: none;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+.gridible-settings__bg-grid__inner {
+  display: flex;
+  gap: 16px;
+  height: 100%;
+  padding: 0 16px;
+  width: auto;
+}
+@media screen and (min-width: 768px) {
+  .gridible-settings__bg-grid__inner {
+    gap: 32px;
+    padding: 0 2vw;
+  }
+}
+.gridible-settings__bg-grid__cell {
+  background: linear-gradient(180deg, rgba(251, 249, 245, 0) 25%, rgba(114, 27, 106, 0.2) 100%);
+  flex: 1;
+}
+.gridible-settings__bg-grid__cell:nth-child(5),
+.gridible-settings__bg-grid__cell:nth-child(6),
+.gridible-settings__bg-grid__cell:nth-child(7),
+.gridible-settings__bg-grid__cell:nth-child(8),
+.gridible-settings__bg-grid__cell:nth-child(9),
+.gridible-settings__bg-grid__cell:nth-child(10),
+.gridible-settings__bg-grid__cell:nth-child(11),
+.gridible-settings__bg-grid__cell:nth-child(12) {
+  display: none;
+}
+@media screen and (min-width: 768px){
+  .gridible-settings__bg-grid__cell:nth-child(5),
+  .gridible-settings__bg-grid__cell:nth-child(6),
+  .gridible-settings__bg-grid__cell:nth-child(7),
+  .gridible-settings__bg-grid__cell:nth-child(8) {
+      display: block;
+  }
+}
+@media screen and (min-width: 992px) {
+  .gridible-settings__bg-grid__cell:nth-child(9),
+  .gridible-settings__bg-grid__cell:nth-child(10),
+  .gridible-settings__bg-grid__cell:nth-child(11),
+  .gridible-settings__bg-grid__cell:nth-child(12) {
+      display: block;
+  }
+}

@@ -1,0 +1,43 @@
+.components-button-group,
+.components-button-group div {
+  display: flex;
+  justify-content: inherit;
+  margin-bottom: 6px;
+  width: 100%;
+
+  .components-button {
+    display: inline-block;
+    flex: 1;
+
+    span {
+      min-width: auto;
+      padding-right: 0 !important;
+    }
+
+    &[aria-checked="true"] {
+      background-color: var(--wp-admin-theme-color,#3858e9);
+      color: #FFFFFF;
+    }
+
+    &[aria-checked="true"] svg {
+      display: none;
+    }
+  }
+}
+
+
+// .components-range-control {
+//   margin-bottom: 0 !important;
+// }
+
+// .components-range-control__wrapper {
+//   flex: auto !important;
+// }
+
+// .components-range-control__number {
+//   flex: 1 !important;
+
+//   .components-input-control__container {
+//     width: 64px !important;
+//   }
+// }

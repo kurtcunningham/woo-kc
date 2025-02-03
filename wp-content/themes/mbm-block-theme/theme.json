@@ -1,0 +1,1234 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "blocks": {
+      "core/button": {
+        "typography": {
+          "customFontSize": false,
+          "fontSizes": [
+            {
+              "fluid": {
+                "min": "0.563rem",
+                "max": "0.875rem"
+              },
+              "size": "0.875rem",
+              "slug": "golf",
+              "name": "Body Small"
+            },
+            {
+              "fluid": {
+                "min": "0.875rem",
+                "max": "1rem"
+              },
+              "size": "1rem",
+              "slug": "foxtrot",
+              "name": "Body Default"
+            },
+            {
+              "fluid": {
+                "min": "1rem",
+                "max": "1.313rem"
+              },
+              "size": "1.313rem",
+              "slug": "echo",
+              "name": "Body Large"
+            },
+            {
+              "fluid": {
+                "min": "1.313rem",
+                "max": "1.75rem"
+              },
+              "size": "1.75rem",
+              "slug": "delta",
+              "name": "Body Extra Large"
+            }
+          ],
+          "fontWeight": true
+        }
+      },
+      "core/heading": {
+        "spacing": {
+          "padding": false,
+          "margin": true
+        },
+        "typography": {
+          "customFontSize": true,
+          "fluid": true,
+          "fontSizes": [
+            {
+              "fluid": {
+                "min": "5.625rem",
+                "max": "10rem"
+              },
+              "size": "10rem",
+              "slug": "ultra",
+              "name": "Display Heading XXLg"
+            },
+            {
+              "fluid": {
+                "min": "4.188rem",
+                "max": "7.5rem"
+              },
+              "size": "7.5rem",
+              "slug": "giga",
+              "name": "Display Heading XLg"
+            },
+            {
+              "fluid": {
+                "min": "3.188rem",
+                "max": "5.625rem"
+              },
+              "size": "5.625rem",
+              "slug": "mega",
+              "name": "Display Heading Lg"
+            },
+            {
+              "fluid": {
+                "min": "2.375rem",
+                "max": "4.188rem"
+              },
+              "size": "4.188rem",
+              "slug": "alpha",
+              "name": "Heading H1"
+            },
+            {
+              "fluid": {
+                "min": "1.75rem",
+                "max": "3.188rem"
+              },
+              "size": "3.188rem",
+              "slug": "bravo",
+              "name": "Heading H2"
+            },
+            {
+              "fluid": {
+                "min": "1.313rem",
+                "max": "2.375rem"
+              },
+              "size": "2.375rem",
+              "slug": "charlie",
+              "name": "Heading H3"
+            },
+            {
+              "fluid": {
+                "min": "1rem",
+                "max": "1.75rem"
+              },
+              "size": "1.75rem",
+              "slug": "delta",
+              "name": "Heading H4"
+            },
+            {
+              "fluid": {
+                "min": "1rem",
+                "max": "1.313rem"
+              },
+              "size": "1.313rem",
+              "slug": "echo",
+              "name": "Heading H5"
+            },
+            {
+              "fluid": {
+                "min": "0.875rem",
+                "max": "1rem"
+              },
+              "size": "1rem",
+              "slug": "foxtrot",
+              "name": "Heading H6"
+            }
+          ],
+          "fontStyle": true,
+          "fontWeight": true,
+          "letterSpacing": false,
+          "lineHeight": true
+        }
+      },
+      "core/list": {
+        "typography": {
+          "customFontSize": false,
+          "fontSizes": [
+            {
+              "fluid": {
+                "min": "0.563rem",
+                "max": "0.875rem"
+              },
+              "size": "0.875rem",
+              "slug": "golf",
+              "name": "Body Small"
+            },
+            {
+              "fluid": {
+                "min": "0.875rem",
+                "max": "1rem"
+              },
+              "size": "1rem",
+              "slug": "foxtrot",
+              "name": "Body Default"
+            },
+            {
+              "fluid": {
+                "min": "1rem",
+                "max": "1.313rem"
+              },
+              "size": "1.313rem",
+              "slug": "echo",
+              "name": "Body Large"
+            },
+            {
+              "fluid": {
+                "min": "1.313rem",
+                "max": "1.75rem"
+              },
+              "size": "1.75rem",
+              "slug": "delta",
+              "name": "Body Extra Large"
+            }
+          ],
+          "fontWeight": true
+        }
+      },
+      "core/navigation": {
+        "typography": {
+          "customFontSize": false,
+          "fontSizes": [
+            {
+              "fluid": {
+                "min": "0.563rem",
+                "max": "0.875rem"
+              },
+              "size": "0.875rem",
+              "slug": "golf",
+              "name": "Body Small"
+            },
+            {
+              "fluid": {
+                "min": "0.875rem",
+                "max": "1rem"
+              },
+              "size": "1rem",
+              "slug": "foxtrot",
+              "name": "Body Default"
+            },
+            {
+              "fluid": {
+                "min": "1rem",
+                "max": "1.313rem"
+              },
+              "size": "1.313rem",
+              "slug": "echo",
+              "name": "Body Large"
+            },
+            {
+              "fluid": {
+                "min": "1.313rem",
+                "max": "1.75rem"
+              },
+              "size": "1.75rem",
+              "slug": "delta",
+              "name": "Body Extra Large"
+            }
+          ],
+          "fontWeight": true
+        }
+      },
+      "core/navigation-link": {
+        "typography": {
+          "customFontSize": false,
+          "fontSizes": [
+            {
+              "fluid": {
+                "min": "0.563rem",
+                "max": "0.875rem"
+              },
+              "size": "0.875rem",
+              "slug": "golf",
+              "name": "Body Small"
+            },
+            {
+              "fluid": {
+                "min": "0.875rem",
+                "max": "1rem"
+              },
+              "size": "1rem",
+              "slug": "foxtrot",
+              "name": "Body Default"
+            },
+            {
+              "fluid": {
+                "min": "1rem",
+                "max": "1.313rem"
+              },
+              "size": "1.313rem",
+              "slug": "echo",
+              "name": "Body Large"
+            },
+            {
+              "fluid": {
+                "min": "1.313rem",
+                "max": "1.75rem"
+              },
+              "size": "1.75rem",
+              "slug": "delta",
+              "name": "Body Extra Large"
+            }
+          ],
+          "fontWeight": true
+        }
+      },
+      "core/paragraph": {
+        "spacing": {
+          "padding": false,
+          "margin": true
+        },
+        "typography": {
+          "customFontSize": true,
+          "lineHeight": true,
+          "letterSpacing": true,
+          "fluid": true,
+          "fontSizes": [
+            {
+              "fluid": {
+                "min": "0.563rem",
+                "max": "0.875rem"
+              },
+              "size": "0.875rem",
+              "slug": "golf",
+              "name": "Body Small"
+            },
+            {
+              "fluid": {
+                "min": "0.875rem",
+                "max": "1rem"
+              },
+              "size": "1rem",
+              "slug": "foxtrot",
+              "name": "Body Default"
+            },
+            {
+              "fluid": {
+                "min": "1rem",
+                "max": "1.313rem"
+              },
+              "size": "1.313rem",
+              "slug": "echo",
+              "name": "Body Large"
+            },
+            {
+              "fluid": {
+                "min": "1.313rem",
+                "max": "1.75rem"
+              },
+              "size": "1.75rem",
+              "slug": "delta",
+              "name": "Body Extra Large"
+            }
+          ],
+          "fontStyle": true,
+          "fontWeight": true
+        }
+      },
+      "core/post-author-name": {
+        "typography": {
+          "customFontSize": true,
+          "lineHeight": true,
+          "letterSpacing": true,
+          "fluid": true,
+          "fontSizes": [
+            {
+              "fluid": {
+                "min": "0.563rem",
+                "max": "0.875rem"
+              },
+              "size": "0.875rem",
+              "slug": "golf",
+              "name": "Body Small"
+            },
+            {
+              "fluid": {
+                "min": "0.875rem",
+                "max": "1rem"
+              },
+              "size": "1rem",
+              "slug": "foxtrot",
+              "name": "Body Default"
+            },
+            {
+              "fluid": {
+                "min": "1rem",
+                "max": "1.313rem"
+              },
+              "size": "1.313rem",
+              "slug": "echo",
+              "name": "Body Large"
+            },
+            {
+              "fluid": {
+                "min": "1.313rem",
+                "max": "1.75rem"
+              },
+              "size": "1.75rem",
+              "slug": "delta",
+              "name": "Body Extra Large"
+            }
+          ],
+          "fontStyle": true,
+          "fontWeight": true
+        }
+      },
+      "core/post-content": {
+        "typography": {
+          "customFontSize": true,
+          "lineHeight": true,
+          "letterSpacing": true,
+          "fluid": true,
+          "fontSizes": [
+            {
+              "fluid": {
+                "min": "0.563rem",
+                "max": "0.875rem"
+              },
+              "size": "0.875rem",
+              "slug": "golf",
+              "name": "Body Small"
+            },
+            {
+              "fluid": {
+                "min": "0.875rem",
+                "max": "1rem"
+              },
+              "size": "1rem",
+              "slug": "foxtrot",
+              "name": "Body Default"
+            },
+            {
+              "fluid": {
+                "min": "1rem",
+                "max": "1.313rem"
+              },
+              "size": "1.313rem",
+              "slug": "echo",
+              "name": "Body Large"
+            },
+            {
+              "fluid": {
+                "min": "1.313rem",
+                "max": "1.75rem"
+              },
+              "size": "1.75rem",
+              "slug": "delta",
+              "name": "Body Extra Large"
+            }
+          ],
+          "fontStyle": true,
+          "fontWeight": true
+        }
+      },
+      "core/post-date": {
+        "typography": {
+          "customFontSize": true,
+          "lineHeight": true,
+          "letterSpacing": true,
+          "fluid": true,
+          "fontSizes": [
+            {
+              "fluid": {
+                "min": "0.563rem",
+                "max": "0.875rem"
+              },
+              "size": "0.875rem",
+              "slug": "golf",
+              "name": "Body Small"
+            },
+            {
+              "fluid": {
+                "min": "0.875rem",
+                "max": "1rem"
+              },
+              "size": "1rem",
+              "slug": "foxtrot",
+              "name": "Body Default"
+            },
+            {
+              "fluid": {
+                "min": "1rem",
+                "max": "1.313rem"
+              },
+              "size": "1.313rem",
+              "slug": "echo",
+              "name": "Body Large"
+            },
+            {
+              "fluid": {
+                "min": "1.313rem",
+                "max": "1.75rem"
+              },
+              "size": "1.75rem",
+              "slug": "delta",
+              "name": "Body Extra Large"
+            }
+          ],
+          "fontStyle": true,
+          "fontWeight": true
+        }
+      },
+      "core/post-excerpt": {
+        "typography": {
+          "customFontSize": true,
+          "lineHeight": true,
+          "letterSpacing": true,
+          "fluid": true,
+          "fontSizes": [
+            {
+              "fluid": {
+                "min": "0.563rem",
+                "max": "0.875rem"
+              },
+              "size": "0.875rem",
+              "slug": "golf",
+              "name": "Body Small"
+            },
+            {
+              "fluid": {
+                "min": "0.875rem",
+                "max": "1rem"
+              },
+              "size": "1rem",
+              "slug": "foxtrot",
+              "name": "Body Default"
+            },
+            {
+              "fluid": {
+                "min": "1rem",
+                "max": "1.313rem"
+              },
+              "size": "1.313rem",
+              "slug": "echo",
+              "name": "Body Large"
+            },
+            {
+              "fluid": {
+                "min": "1.313rem",
+                "max": "1.75rem"
+              },
+              "size": "1.75rem",
+              "slug": "delta",
+              "name": "Body Extra Large"
+            }
+          ],
+          "fontStyle": true,
+          "fontWeight": true
+        }
+      },
+      "core/post-terms": {
+        "typography": {
+          "customFontSize": true,
+          "lineHeight": true,
+          "letterSpacing": true,
+          "fluid": true,
+          "fontSizes": [
+            {
+              "fluid": {
+                "min": "0.563rem",
+                "max": "0.875rem"
+              },
+              "size": "0.875rem",
+              "slug": "golf",
+              "name": "Body Small"
+            },
+            {
+              "fluid": {
+                "min": "0.875rem",
+                "max": "1rem"
+              },
+              "size": "1rem",
+              "slug": "foxtrot",
+              "name": "Body Default"
+            },
+            {
+              "fluid": {
+                "min": "1rem",
+                "max": "1.313rem"
+              },
+              "size": "1.313rem",
+              "slug": "echo",
+              "name": "Body Large"
+            },
+            {
+              "fluid": {
+                "min": "1.313rem",
+                "max": "1.75rem"
+              },
+              "size": "1.75rem",
+              "slug": "delta",
+              "name": "Body Extra Large"
+            }
+          ],
+          "fontStyle": true,
+          "fontWeight": true
+        }
+      },
+      "core/post-title": {
+        "typography": {
+          "customFontSize": true,
+          "fluid": true,
+          "fontSizes": [
+            {
+              "fluid": {
+                "min": "5.625rem",
+                "max": "10rem"
+              },
+              "size": "10rem",
+              "slug": "ultra",
+              "name": "Display Heading XXLg"
+            },
+            {
+              "fluid": {
+                "min": "4.188rem",
+                "max": "7.5rem"
+              },
+              "size": "7.5rem",
+              "slug": "giga",
+              "name": "Display Heading XLg"
+            },
+            {
+              "fluid": {
+                "min": "3.188rem",
+                "max": "5.625rem"
+              },
+              "size": "5.625rem",
+              "slug": "mega",
+              "name": "Display Heading Lg"
+            },
+            {
+              "fluid": {
+                "min": "2.375rem",
+                "max": "4.188rem"
+              },
+              "size": "4.188rem",
+              "slug": "alpha",
+              "name": "Heading H1"
+            },
+            {
+              "fluid": {
+                "min": "1.75rem",
+                "max": "3.188rem"
+              },
+              "size": "3.188rem",
+              "slug": "bravo",
+              "name": "Heading H2"
+            },
+            {
+              "fluid": {
+                "min": "1.313rem",
+                "max": "2.375rem"
+              },
+              "size": "2.375rem",
+              "slug": "charlie",
+              "name": "Heading H3"
+            },
+            {
+              "fluid": {
+                "min": "1rem",
+                "max": "1.75rem"
+              },
+              "size": "1.75rem",
+              "slug": "delta",
+              "name": "Heading H4"
+            },
+            {
+              "fluid": {
+                "min": "1rem",
+                "max": "1.313rem"
+              },
+              "size": "1.313rem",
+              "slug": "echo",
+              "name": "Heading H5"
+            },
+            {
+              "fluid": {
+                "min": "0.875rem",
+                "max": "1rem"
+              },
+              "size": "1rem",
+              "slug": "foxtrot",
+              "name": "Heading H6"
+            }
+          ],
+          "fontStyle": true,
+          "fontWeight": true,
+          "letterSpacing": false,
+          "lineHeight": true
+        }
+      },
+      "core/query-title": {
+        "typography": {
+          "customFontSize": true,
+          "fluid": true,
+          "fontSizes": [
+            {
+              "fluid": {
+                "min": "5.625rem",
+                "max": "10rem"
+              },
+              "size": "10rem",
+              "slug": "ultra",
+              "name": "Display Heading XXLg"
+            },
+            {
+              "fluid": {
+                "min": "4.188rem",
+                "max": "7.5rem"
+              },
+              "size": "7.5rem",
+              "slug": "giga",
+              "name": "Display Heading XLg"
+            },
+            {
+              "fluid": {
+                "min": "3.188rem",
+                "max": "5.625rem"
+              },
+              "size": "5.625rem",
+              "slug": "mega",
+              "name": "Display Heading Lg"
+            },
+            {
+              "fluid": {
+                "min": "2.375rem",
+                "max": "4.188rem"
+              },
+              "size": "4.188rem",
+              "slug": "alpha",
+              "name": "Heading H1"
+            },
+            {
+              "fluid": {
+                "min": "1.75rem",
+                "max": "3.188rem"
+              },
+              "size": "3.188rem",
+              "slug": "bravo",
+              "name": "Heading H2"
+            },
+            {
+              "fluid": {
+                "min": "1.313rem",
+                "max": "2.375rem"
+              },
+              "size": "2.375rem",
+              "slug": "charlie",
+              "name": "Heading H3"
+            },
+            {
+              "fluid": {
+                "min": "1rem",
+                "max": "1.75rem"
+              },
+              "size": "1.75rem",
+              "slug": "delta",
+              "name": "Heading H4"
+            },
+            {
+              "fluid": {
+                "min": "1rem",
+                "max": "1.313rem"
+              },
+              "size": "1.313rem",
+              "slug": "echo",
+              "name": "Heading H5"
+            },
+            {
+              "fluid": {
+                "min": "0.875rem",
+                "max": "1rem"
+              },
+              "size": "1rem",
+              "slug": "foxtrot",
+              "name": "Heading H6"
+            }
+          ],
+          "fontStyle": true,
+          "fontWeight": true,
+          "letterSpacing": false,
+          "lineHeight": true
+        }
+      },
+      "core/quote": {
+        "typography": {
+          "customFontSize": true,
+          "fluid": true,
+          "fontSizes": [
+            {
+              "fluid": {
+                "min": "5.625rem",
+                "max": "10rem"
+              },
+              "size": "10rem",
+              "slug": "ultra",
+              "name": "Display Heading XXLg"
+            },
+            {
+              "fluid": {
+                "min": "4.188rem",
+                "max": "7.5rem"
+              },
+              "size": "7.5rem",
+              "slug": "giga",
+              "name": "Display Heading XLg"
+            },
+            {
+              "fluid": {
+                "min": "3.188rem",
+                "max": "5.625rem"
+              },
+              "size": "5.625rem",
+              "slug": "mega",
+              "name": "Display Heading Lg"
+            },
+            {
+              "fluid": {
+                "min": "2.375rem",
+                "max": "4.188rem"
+              },
+              "size": "4.188rem",
+              "slug": "alpha",
+              "name": "Heading H1"
+            },
+            {
+              "fluid": {
+                "min": "1.75rem",
+                "max": "3.188rem"
+              },
+              "size": "3.188rem",
+              "slug": "bravo",
+              "name": "Heading H2"
+            },
+            {
+              "fluid": {
+                "min": "1.313rem",
+                "max": "2.375rem"
+              },
+              "size": "2.375rem",
+              "slug": "charlie",
+              "name": "Heading H3"
+            },
+            {
+              "fluid": {
+                "min": "1rem",
+                "max": "1.75rem"
+              },
+              "size": "1.75rem",
+              "slug": "delta",
+              "name": "Heading H4"
+            },
+            {
+              "fluid": {
+                "min": "1rem",
+                "max": "1.313rem"
+              },
+              "size": "1.313rem",
+              "slug": "echo",
+              "name": "Heading H5"
+            },
+            {
+              "fluid": {
+                "min": "0.875rem",
+                "max": "1rem"
+              },
+              "size": "1rem",
+              "slug": "foxtrot",
+              "name": "Heading H6"
+            }
+          ],
+          "fontStyle": true,
+          "fontWeight": true,
+          "letterSpacing": false,
+          "lineHeight": true
+        }
+      }
+    },
+    "color": {
+      "defaultGradients": false,
+      "defaultPalette": false,
+      "gradients": [],
+      "palette": [
+        {
+          "color": "#262F38",
+          "name": "Primary - One",
+          "slug": "primary-1"
+        },
+        {
+          "color": "#D2DBE4",
+          "name": "Primary - Two",
+          "slug": "primary-2"
+        },
+        {
+          "color": "#1F2831",
+          "name": "Secondary - One",
+          "slug": "secondary-1"
+        },
+        {
+          "color": "#00080F",
+          "name": "Secondary - Two",
+          "slug": "secondary-2"
+        },
+        {
+          "color": "#FFFFFF",
+          "name": "Secondary - Three",
+          "slug": "secondary-3"
+        },
+        {
+          "color": "#A2B0BD",
+          "name": "Shade - One",
+          "slug": "shade-1"
+        },
+        {
+          "color": "#B5C0CA",
+          "name": "Shade - Two",
+          "slug": "shade-2"
+        },
+        {
+          "color": "#D1D8DE",
+          "name": "Shade - Three",
+          "slug": "shade-3"
+        },
+        {
+          "color": "#ECEFF2",
+          "name": "Shade - Four",
+          "slug": "shade-4"
+        }
+      ]
+    },
+    "layout": {
+      "contentSize": "768px",
+      "wideSize": "1600px"
+    },
+    "spacing": {
+      "blockGap": null,
+      "margin": true,
+      "padding": true,
+      "defaultSpacingSizes": false,
+      "spacingScale": {
+        "operator": "*",
+        "increment": 2,
+        "steps": 7,
+        "mediumStep": 32,
+        "unit": "px"
+      },
+      "units": [
+        "px",
+        "em",
+        "rem"
+      ]
+    },
+    "typography": {
+      "customFontSize": false,
+      "dropCap": true,
+      "lineHeight": false,
+      "fluid": true,
+      "defaultFontSizes": true,
+      "fontSizes": [
+        {
+          "fluid": {
+            "min": "3.188rem",
+            "max": "7.5rem"
+          },
+          "size": "7.5rem",
+          "slug": "giga",
+          "name": "Display Heading XLg"
+        },
+        {
+          "fluid": {
+            "min": "2.375rem",
+            "max": "5.625rem"
+          },
+          "size": "5.625rem",
+          "slug": "mega",
+          "name": "Display Heading Lg"
+        },
+        {
+          "fluid": {
+            "min": "2rem",
+            "max": "4.188rem"
+          },
+          "size": "4.188rem",
+          "slug": "alpha",
+          "name": "Heading H1"
+        },
+        {
+          "fluid": {
+            "min": "1.75rem",
+            "max": "3.188rem"
+          },
+          "size": "3.188rem",
+          "slug": "bravo",
+          "name": "Heading H2"
+        },
+        {
+          "fluid": {
+            "min": "1.75rem",
+            "max": "2.375rem"
+          },
+          "size": "2.375rem",
+          "slug": "charlie",
+          "name": "Heading H3"
+        },
+        {
+          "fluid": {
+            "min": "1.313rem",
+            "max": "1.75rem"
+          },
+          "size": "1.75rem",
+          "slug": "delta",
+          "name": "Heading H4 / Body Extra Large"
+        },
+        {
+          "fluid": false,
+          "size": "1.313rem",
+          "slug": "echo",
+          "name": "Heading H5 / Body Large"
+        },
+        {
+          "fluid": false,
+          "size": "1rem",
+          "slug": "foxtrot",
+          "name": "Heading H6 / Body Default"
+        },
+        {
+          "fluid": false,
+          "size": "0.875rem",
+          "slug": "golf",
+          "name": "Body Small"
+        }
+      ],
+      "fontStyle": false,
+      "fontWeight": true
+    },
+    "useRootPaddingAwareAlignments": true
+  },
+  "styles": {
+    "blocks": {
+      "core/button": {
+        "spacing": {
+          "padding": {
+            "top": "1rem",
+            "right": "2rem",
+            "bottom": "1rem",
+            "left": "2rem"
+          }
+        },
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--foxtrot)"
+        }
+      },
+      "core/heading": {
+        "spacing": {
+          "margin": {
+            "top": "0px",
+            "bottom": "12px"
+          }
+        },
+        "typography": {
+          "lineHeight": "1.15"
+        }
+      },
+      "core/list": {
+        "typography": {
+          "lineHeight": 1.5
+        },
+        "elements": {
+          "link": {
+            "typography": {
+              "fontWeight": "400"
+            }
+          }
+        },
+        "spacing": {
+          "margin": {
+            "top": "0px",
+            "bottom": "12px"
+          }
+        }
+      },
+      "core/navigation-link": {
+        "typography": {
+          "lineHeight": 1.5
+        }
+      },
+      "core/paragraph": {
+        "spacing": {
+          "margin": {
+            "top": "0px",
+            "bottom": "12px"
+          }
+        },
+        "typography": {
+          "lineHeight": 1.5
+        },
+        "elements": {
+          "link": {
+            "typography": {
+              "fontWeight": "400"
+            }
+          }
+        }
+      },
+      "core/post-title": {
+        "typography": {
+          "lineHeight": 1.15
+        }
+      },
+      "core/quote": {
+        "elements": {
+          "p": {
+            "typography": {
+              "lineHeight": "1.15"
+            }
+          },
+          "cite": {
+            "typography": {
+              "fontSize": "var(--wp--preset--font-size--foxtrot)"
+            }
+          }
+        }
+      }
+    },
+    "color": {},
+    "elements": {
+      "h1": {
+        "spacing": {
+          "margin": {
+            "top": "0px",
+            "bottom": "12px"
+          }
+        },
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--alpha)",
+          "fontWeight": "700",
+          "lineHeight": "1.15"
+        }
+      },
+      "h2": {
+        "spacing": {
+          "margin": {
+            "top": "0px",
+            "bottom": "12px"
+          }
+        },
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--bravo)",
+          "fontWeight": "700",
+          "lineHeight": "1.15"
+        }
+      },
+      "h3": {
+        "spacing": {
+          "margin": {
+            "top": "0px",
+            "bottom": "12px"
+          }
+        },
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--charlie)",
+          "fontWeight": "700",
+          "lineHeight": "1.15"
+        }
+      },
+      "h4": {
+        "spacing": {
+          "margin": {
+            "top": "0px",
+            "bottom": "12px"
+          }
+        },
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--delta)",
+          "fontWeight": "700",
+          "lineHeight": "1.15"
+        }
+      },
+      "h5": {
+        "spacing": {
+          "margin": {
+            "top": "0px",
+            "bottom": "12px"
+          }
+        },
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--echo)",
+          "fontWeight": "700",
+          "lineHeight": "1.15"
+        }
+      },
+      "h6": {
+        "spacing": {
+          "margin": {
+            "top": "0px",
+            "bottom": "12px"
+          }
+        },
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--foxtrot)",
+          "fontWeight": "700",
+          "lineHeight": "1.15"
+        }
+      }
+    },
+    "spacing": {
+      "padding": {
+        "top": "0px",
+        "right": "clamp(16px, 2vw, 32px)",
+        "bottom": "0px",
+        "left": "clamp(16px, 2vw, 32px)"
+      }
+    },
+    "typography": {
+      "fontSize": "var(--wp--preset--font-size--foxtrot)"
+    }
+  },
+  "templateParts": [
+    {
+      "area": "header",
+      "name": "header",
+      "title": "Header"
+    },
+    {
+      "area": "footer",
+      "name": "footer",
+      "title": "Footer"
+    }
+  ],
+  "customTemplates": [
+    {
+      "name": "blank",
+      "postTypes": [
+        "page",
+        "post"
+      ],
+      "title": "Blank"
+    },
+    {
+      "name": "page-feature",
+      "postTypes": [
+        "page"
+      ],
+      "title": "Pages: Feature"
+    },
+    {
+      "name": "page-splash",
+      "postTypes": [
+        "page"
+      ],
+      "title": "Pages: Splash"
+    },
+    {
+      "name": "404",
+      "postTypes": [
+        "page"
+      ],
+      "title": "404"
+    }
+  ]
+}

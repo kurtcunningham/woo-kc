@@ -1,0 +1,35 @@
+// Size Variables Settings Stylesheet
+// ========================================
+
+@use './spacers' as *;
+
+$size-xs:    $spacer-16;
+$size-sm:    $spacer-32;
+$size-md:    $spacer-48;
+$size-lg:    $spacer-64;
+$size-xlg:   $spacer-96;
+$size-xxlg:  $spacer-128;
+
+
+$sizes: (
+	xs: (
+    size-prop: $size-xs,
+  ),
+  sm: (
+    size-prop: $size-sm,
+  ),
+  md: (
+    size-prop: $size-md,
+  ),
+  lg: (
+    size-prop: $size-lg,
+  ),
+  xlg: (
+    size-prop: $size-xlg,
+  ),
+	xxlg: (
+    size-prop: $size-xxlg,
+  )
+);
+
+$size-full:     100%;

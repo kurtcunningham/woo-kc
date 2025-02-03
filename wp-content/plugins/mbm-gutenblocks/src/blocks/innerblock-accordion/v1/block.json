@@ -1,0 +1,9 @@
+{
+	"title": "Accordion (innerblock)",
+	"name": "mbm/innerblock-accordion-accordion",
+	"category": "design",
+	"editorScript": "mbm-gutenblocks/editor/script",
+	"viewScript": "mbm-gutenblocks/front/script",
+	"editorStyle": "mbm-gutenblocks/editor/style",
+	"style": "mbm-gutenblocks/front/style"
+}

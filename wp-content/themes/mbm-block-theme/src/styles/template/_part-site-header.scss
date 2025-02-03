@@ -1,0 +1,147 @@
+// Header Site Part Stylesheets
+// NOTE: General styles for all header template parts
+// =====================================================
+
+// Variables
+$partHeader-position:                           relative;
+$partHeader-zIndex:                             1;
+
+$partHeader-navigationContainer-gap0:           0;
+$partHeader-navigationContainer-gapMd:          var(--wp--preset--spacing--40);
+$partHeader-navigationContainer-gapLg:          var(--wp--preset--spacing--50);
+
+$partHeader-navigationItem-hide:                none;
+
+$partHeader-navigationItemHover-op50:           0.5;
+$partHeader-navigationItemHover-trans:          all 0.35s ease;
+
+$partHeader-navigationSubmenu-border:           none !important;
+$partHeader-navigationSubmenu-bxShadow:         0px 0px 12px 0px rgba(0, 0, 0, 0.05);
+$partHeader-navigationSubmenu-pad:              var(--wp--preset--spacing--40);
+$partHeader-navigationSubmenu-top:              150% !important;
+
+$pargeHeader-siteLogo-alignmentMd:              left;
+
+// Structure
+.part-amplify-header {
+  position: $partHeader-position;
+  z-index: $partHeader-zIndex;
+  
+  // Part Header - Navigation Block
+  .wp-block-navigation__container {
+    gap: $partHeader-navigationContainer-gapMd;
+
+    @media screen and (min-width: $breakpoint-large) {
+      gap: $partHeader-navigationContainer-gapLg;
+    }
+
+    // NOTES: This might be incorrect.
+    & + .wp-block-buttons {
+      gap: $partHeader-navigationContainer-gap0;
+      margin-left: calc(#{$partHeader-navigationContainer-gapMd} - 0.5em);
+
+      @media screen and (min-width: $breakpoint-large) {
+        margin-left: calc(#{$partHeader-navigationContainer-gapLg} - 0.5em);
+      }
+
+      // NOTE: Temp fix until I figure out what I was doing above!
+      &.has-block-spacing {
+        gap: $partHeader-navigationContainer-gapLg;
+
+        @media screen and (min-width: $breakpoint-medium) {
+          gap: $partHeader-navigationContainer-gapMd;
+        }
+      }
+    }
+  }
+
+  // Part Header - Navigation Buttons
+  .wp-block-buttons {
+    gap: $partHeader-navigationContainer-gapMd;
+
+    @media screen and (min-width: $breakpoint-large) {
+      gap: $partHeader-navigationContainer-gapLg;
+    }
+  }
+
+  // Part Header - Navigation Item Block
+  .wp-block-navigation-item {
+
+    // Visibility
+    $navBreakpoints: (
+      sm: (
+        min-width: 0,
+        max-width: $breakpoint-medium,
+      ),
+      md: (
+        min-width: $breakpoint-medium,
+        max-width: $breakpoint-large,
+      ),
+      lg: (
+        min-width: $breakpoint-large,
+        max-width: 1000000000px,
+      )
+    );
+
+    @each $navBreakpoint, $keys in $navBreakpoints {
+      $min: map-get($keys, min-width);
+      $max: map-get($keys, max-width);
+      
+      @media screen and (min-width: #{$min}) and (max-width: #{$max}) {
+        &.hidden-#{$navBreakpoint} {
+          display: $partHeader-navigationItem-hide !important;
+        }
+      }
+    }
+
+    // State: Hover
+    a,
+    button {
+      transition: $partHeader-navigationItemHover-trans;
+    }
+    
+    &:hover > a,
+    &:hover > button {
+      opacity: $partHeader-navigationItemHover-op50;
+    }
+  }
+
+  // Part Header - Navigation Submenu
+  .wp-block-navigation__submenu {
+
+    // Subnavigation - Container
+    &-container {
+      border: $partHeader-navigationSubmenu-border;
+      box-shadow: $partHeader-navigationSubmenu-bxShadow;
+      padding: $partHeader-navigationSubmenu-pad;
+      opacity: 1 !important;
+      top: $partHeader-navigationSubmenu-top;
+  
+      .wp-block-navigation-item.wp-block-navigation-link {
+        font-size: var(--wp--preset--font-size--foxtrot) !important;
+        white-space: nowrap;
+      }
+    }
+
+    // Subnavigtion - Item Link
+    .wp-block-navigation-link {
+      margin: 0;
+    }
+   }
+
+   // Part Header - Navigation Responsive Open Button
+   button.wp-block-navigation__responsive-container-open {
+
+    @media screen and (min-width: 0) and (max-width: $breakpoint-medium) {
+      margin-left: auto;
+    }
+   }
+
+  // Part Header - Site Logo Block
+  .wp-block-site-logo {
+    
+    @media screen and (max-width: $breakpoint-large) {
+      text-align: $pargeHeader-siteLogo-alignmentMd;
+    }
+  }
+}

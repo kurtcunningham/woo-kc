@@ -1,0 +1,22 @@
+// Categories List Core Block Stylesheets
+// =============================================
+
+// Variables
+$catList-margin:                        0;
+$catList-lStyle:                        none;
+$catList-padding:                       0;
+
+$catList-catItem-marBottom:             12px;
+
+
+// Structure
+.wp-block-categories-list {
+  margin: $catList-margin;
+  list-style: $catList-lStyle;
+  padding: $catList-padding;
+
+  // Categories List - List Item
+  .cat-item {
+    margin-bottom: $catList-catItem-marBottom;
+  }
+}

@@ -1,0 +1,82 @@
+// Split Hero Pattern Stylesheets
+// =====================================================
+
+// Variables
+$ampPatHeroSplit-fig-height:                            100%;
+$ampPatHeroSplit-fig-margin:                            0;
+$ampPatHeroSplit-fig-marginLeftSm:                      calc($siteGlobal-paddingHorz * -1);
+$ampPatHeroSplit-fig-marginLeftLg:                      0;
+$ampPatHeroSplit-fig-mxHeightSm:                        300px;
+$ampPatHeroSplit-fig-mxHeightMd:                        450px;
+$ampPatHeroSplit-fig-mxHeightLg:                        725px;
+$ampPatHeroSplit-fig-overflow:                          hidden;
+$ampPatHeroSplit-fig-widthMd:                           100vw;
+$ampPatHeroSplit-fig-widthLg:                           60vw;
+
+$ampPatHeroSplit-figImg-oFitSm:                         none;
+$ampPatHeroSplit-figImg-oFitMd:                         cover;
+$ampPatHeroSplit-figImg-oPosition:                      bottom center;
+$ampPatHeroSplit-figImg-size:                           100%;
+
+
+// Structure
+.amplify-pat-hero-split {
+  $rootParent: &;
+
+  // Split Hero Pattern - Figure
+  &-figure {
+    height: $ampPatHeroSplit-fig-height;
+    margin: $ampPatHeroSplit-fig-margin;
+    margin-left: $ampPatHeroSplit-fig-marginLeftSm;
+    max-height: $ampPatHeroSplit-fig-mxHeightSm;
+    overflow: $ampPatHeroSplit-fig-overflow;
+    width: $ampPatHeroSplit-fig-widthMd;
+
+    @media screen and (min-width: $breakpoint-medium) {
+      max-height: $ampPatHeroSplit-fig-mxHeightMd;
+    }
+
+    @media screen and (min-width: $breakpoint-large) {
+      margin-left: $ampPatHeroSplit-fig-marginLeftLg;
+      max-height: $ampPatHeroSplit-fig-mxHeightLg;
+      width: $ampPatHeroSplit-fig-widthLg;
+    }
+
+    img {
+      height: 100%;
+      object-fit: $ampPatHeroSplit-figImg-oFitSm;
+      object-position: $ampPatHeroSplit-figImg-oPosition;
+      width: $ampPatHeroSplit-figImg-size;
+
+      @media screen and (min-width: $breakpoint-medium) {
+        object-fit: $ampPatHeroSplit-figImg-oFitMd;
+      }
+
+      @media screen and (min-width: $breakpoint-large) {
+        height: $ampPatHeroSplit-fig-mxHeightLg;
+      }
+    }
+  }
+
+  // Split Hero Pattern - CTAs
+  .wp-block-buttons {
+    gap: var(--wp--preset--spacing--40);
+  }
+
+  // Split Hero Pattern - Size: Small
+  &--sm {
+
+    #{$rootParent}-figure {
+
+      @media screen and (min-width: $breakpoint-medium) {
+        max-height: $ampPatHeroSplit-fig-mxHeightMd;
+      }
+
+      img {
+        @media screen and (min-width: $breakpoint-medium) {
+          height: $ampPatHeroSplit-fig-mxHeightMd;
+        }
+      }
+    }
+  }
+}

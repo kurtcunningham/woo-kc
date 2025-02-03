@@ -1,0 +1,28 @@
+// Editor - General Styles
+// ========================================
+
+@use 'sass:math';
+
+.gridible-toggle {
+  &--full-width {
+    width: 100%;
+  }
+}
+
+// Inspector panel
+.block-editor-block-inspector {
+  $section-gap: 32px;
+  $section-inner-gap: math.div($section-gap, 2.5);
+
+  .gridible-tools-panel {
+    gap: $section-gap;
+    margin-bottom: 1rem;
+
+    // WARN: This is a hacky way to enforce a spacing for our tool panel controls.
+    &__group {
+      display: flex;
+      flex-direction: column;
+      gap: $section-inner-gap;
+    }
+  }
+}

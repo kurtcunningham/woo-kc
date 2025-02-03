@@ -1,0 +1,279 @@
+.wp-block-mbm-accordion-details-summary summary {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.wp-block-mbm-accordion-details-summary summary i {
+  line-height: 1.5;
+}
+.wp-block-mbm-accordion-details-summary .wp-block-mbm-accordion-details-summary__icon-open {
+  display: none;
+}
+.wp-block-mbm-accordion-details-summary .wp-block-mbm-accordion-details-summary__icon-closed {
+  display: inline;
+}
+.wp-block-mbm-accordion-details-summary[open] .wp-block-mbm-accordion-details-summary__icon-open {
+  display: inline;
+}
+.wp-block-mbm-accordion-details-summary[open] .wp-block-mbm-accordion-details-summary__icon-closed {
+  display: none;
+}
+
+* .wp-block-mbm-innerblock-accordion .wp-block-mbm-innerblock-accordion-title {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+}
+* .wp-block-mbm-innerblock-accordion .wp-block-mbm-innerblock-accordion-title::-webkit-details-marker {
+  display: none;
+}
+* .wp-block-mbm-innerblock-accordion .wp-block-mbm-innerblock-accordion-title__icon--open {
+  display: flex;
+}
+* .wp-block-mbm-innerblock-accordion .wp-block-mbm-innerblock-accordion-title__icon--closed {
+  display: none;
+}
+* .wp-block-mbm-innerblock-accordion[open] .wp-block-mbm-innerblock-accordion-title__icon--open {
+  display: none;
+}
+* .wp-block-mbm-innerblock-accordion[open] .wp-block-mbm-innerblock-accordion-title__icon--closed {
+  display: flex;
+}
+
+* .wp-block-mbm-query-taxonomy-filter {
+  position: relative;
+}
+* .wp-block-mbm-query-taxonomy-filter .wp-block-mbm-query-taxonomy-filter__status {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+* .wp-block-mbm-query-taxonomy-filter .wp-block-mbm-query-taxonomy-filter__status .wp-block-mbm-query-taxonomy-filter__icon--open {
+  display: flex;
+}
+* .wp-block-mbm-query-taxonomy-filter .wp-block-mbm-query-taxonomy-filter__status .wp-block-mbm-query-taxonomy-filter__icon--closed {
+  display: none;
+}
+* .wp-block-mbm-query-taxonomy-filter--open .wp-block-mbm-query-taxonomy-filter__status .wp-block-mbm-query-taxonomy-filter__icon--open {
+  display: none;
+}
+* .wp-block-mbm-query-taxonomy-filter--open .wp-block-mbm-query-taxonomy-filter__status .wp-block-mbm-query-taxonomy-filter__icon--closed {
+  display: flex;
+}
+* .wp-block-mbm-query-taxonomy-filter--open .wp-block-mbm-query-taxonomy-filter__options {
+  display: block;
+}
+* .wp-block-mbm-query-taxonomy-filter__options {
+  display: none;
+  list-style: none;
+  background-color: inherit;
+  border: 1px solid;
+  border-color: inherit;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  left: -1px;
+  margin-bottom: 0;
+  margin-top: 8px;
+  max-height: 1000px;
+  overflow-y: scroll;
+  padding: inherit;
+  position: absolute;
+  right: 0;
+  top: calc(100% - 8px);
+  width: calc(100% + 2px);
+  z-index: 2;
+}
+* .wp-block-mbm-query-taxonomy-filter__options ul {
+  padding-inline-start: 1.5em;
+  margin-top: 8px;
+  list-style: none;
+}
+* .wp-block-mbm-query-taxonomy-filter__options::-webkit-scrollbar {
+  width: 4px;
+}
+* .wp-block-mbm-query-taxonomy-filter__options::-webkit-scrollbar-thumb {
+  border-radius: 30em;
+  background-color: #cdcdcd;
+}
+* .wp-block-mbm-query-taxonomy-filter__options li {
+  font-size: inherit;
+}
+* .wp-block-mbm-query-taxonomy-filter__options li:not(:last-child) {
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+* .wp-block-mbm-semantic-wrapper {
+  box-sizing: border-box;
+}
+
+* .wp-block-mbm-tab-layout .wp-block-mbm-tab-buttons {
+  cursor: pointer;
+}
+* .wp-block-mbm-tab-layout .wp-block-mbm-tab-content-pane {
+  display: none;
+}
+* .wp-block-mbm-tab-layout .wp-block-mbm-tab-content-pane--selected {
+  display: unset;
+}
+
+.edit-post-sidebar .label__spacing {
+  margin-bottom: 2px;
+}
+.edit-post-sidebar .components-panel__row label {
+  margin-right: 0;
+  max-width: 100%;
+}
+.edit-post-sidebar .components-base-control {
+  width: 100%;
+}
+
+.border-radius__1 {
+  border-radius: 1px;
+}
+
+.border-radius__2 {
+  border-radius: 2px;
+}
+
+.border-radius__3 {
+  border-radius: 3px;
+}
+
+.border-radius__4 {
+  border-radius: 4px;
+}
+
+.border-radius__5 {
+  border-radius: 5px;
+}
+
+.border-radius__6 {
+  border-radius: 6px;
+}
+
+.border-radius__7 {
+  border-radius: 7px;
+}
+
+.border-radius__8 {
+  border-radius: 8px;
+}
+
+.border-radius__9 {
+  border-radius: 9px;
+}
+
+.border-radius__10 {
+  border-radius: 10px;
+}
+
+.padding__xs {
+  padding: 16px;
+}
+
+.padding__sm {
+  padding: 32px;
+}
+
+.padding__md {
+  padding: 48px;
+}
+
+.padding__lg {
+  padding: 64px;
+}
+
+.padding__xlg {
+  padding: 96px;
+}
+
+.padding__xxlg {
+  padding: 128px;
+}
+
+@media screen and (min-width: 576px) {
+  .padding__sm-xs {
+    padding: 16px;
+  }
+  .padding__sm-sm {
+    padding: 32px;
+  }
+  .padding__sm-md {
+    padding: 48px;
+  }
+  .padding__sm-lg {
+    padding: 64px;
+  }
+  .padding__sm-xlg {
+    padding: 96px;
+  }
+  .padding__sm-xxlg {
+    padding: 128px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .padding__md-xs {
+    padding: 16px;
+  }
+  .padding__md-sm {
+    padding: 32px;
+  }
+  .padding__md-md {
+    padding: 48px;
+  }
+  .padding__md-lg {
+    padding: 64px;
+  }
+  .padding__md-xlg {
+    padding: 96px;
+  }
+  .padding__md-xxlg {
+    padding: 128px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .padding__lg-xs {
+    padding: 16px;
+  }
+  .padding__lg-sm {
+    padding: 32px;
+  }
+  .padding__lg-md {
+    padding: 48px;
+  }
+  .padding__lg-lg {
+    padding: 64px;
+  }
+  .padding__lg-xlg {
+    padding: 96px;
+  }
+  .padding__lg-xxlg {
+    padding: 128px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .padding__xlg-xs {
+    padding: 16px;
+  }
+  .padding__xlg-sm {
+    padding: 32px;
+  }
+  .padding__xlg-md {
+    padding: 48px;
+  }
+  .padding__xlg-lg {
+    padding: 64px;
+  }
+  .padding__xlg-xlg {
+    padding: 96px;
+  }
+  .padding__xlg-xxlg {
+    padding: 128px;
+  }
+}

@@ -1,0 +1,64 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"title": "Query Result Count",
+	"name": "mbm/query-result-count",
+	"description": "",
+	"category": "design",
+	"attributes": {},
+	"ancestor": [
+		"core/query"
+	],
+	"usesContext": [
+		"query",
+		"queryId"
+	],
+	"supports": {
+		"anchor": true,
+		"align": true,
+		"ariaLabel": false,
+		"className": true,
+		"color": {
+			"background": false,
+			"gradients": false,
+			"link": true,
+			"text": true
+		},
+		"customClassName": true,
+		"dimensions": {
+			"minHeight": false
+		},
+		"layout": false,
+		"multiple": true,
+		"reusable": true,
+		"position": {
+			"sticky": false
+		},
+    "spacing": {
+        "margin": true,
+        "padding": true,
+        "blockGap": false
+    },
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontStyle": true,
+			"__experimentalFontWeight": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true,
+			"__experimentalWritingMode": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true,
+				"fontAppearance": true,
+				"textTransform": true
+			}
+		},
+		"interactivity": true
+	},
+	"render": "file:./render.php",
+	"editorScript": "mbm-gutenblocks/editor/script",
+	"editorStyle": "mbm-gutenblocks/editor/style",
+	"style": "mbm-gutenblocks/front/style"
+}

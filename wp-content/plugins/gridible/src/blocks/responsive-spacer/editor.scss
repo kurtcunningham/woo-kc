@@ -1,0 +1,25 @@
+// Editor Stylesheets
+// ========================================
+
+// Variables
+$spacer-bgColor:					#F3F4F5;
+$spacer-display:					block;
+$spacer-minHeight:				8px;
+$spacer-opacity-default:	0;
+$spacer-opacity-hover:		0.65;
+
+// Styles
+.block-editor-page {
+
+	.wp-block-gridible-responsive-spacer {
+		background-color: $spacer-bgColor;
+		display: $spacer-display;
+		min-height: $spacer-minHeight;
+		opacity: $spacer-opacity-default;
+		transition: opacity 0.35s ease;
+
+		&:hover {
+			opacity: $spacer-opacity-hover;
+		}
+	}
+}

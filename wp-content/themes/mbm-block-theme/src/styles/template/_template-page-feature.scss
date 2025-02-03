@@ -1,0 +1,95 @@
+// Feature Single Template Stylesheets
+// =====================================================
+
+// Variables
+$pageTempFeature-heightSm:                50vh;
+$pageTempFeature-heightLg:                100vh;
+$pageTempFeature-mxHeight:                1024px;
+$pageTempFeature-minHeight:               500px !important;
+$pageTempFeature-position:                relative;
+
+$pageTempFeature-headerLogo-margin:       0 auto;
+
+$pageTempFeature-headerNavItems-color:    #FFFFFF;
+
+$pageTempFeature-headerNavSubItems-color: inherit;
+
+$pageTempFeature-image-left:              0;
+$pageTempFeature-image-position:          absolute;
+$pageTempFeature-image-right:             0;
+$pageTempFeature-image-top:               -12px;
+$pageTempFeature-image-width:             100%;
+$pageTempFeature-image-zIndex:            0;
+
+
+// Structure
+.page-template-page-feature {
+
+  // Page Feature: Header
+  &__header {
+    height: $pageTempFeature-heightSm;
+    max-height: $pageTempFeature-mxHeight;
+    min-height: $pageTempFeature-minHeight;
+    position: $pageTempFeature-position;
+
+    @media screen and (min-width: $breakpoint-medium) {
+      height: $pageTempFeature-heightLg;
+    }
+  
+    // Single Feature: Navigation
+    .part-amplify-header {
+
+      .wp-block-image {
+        margin: $pageTempFeature-headerLogo-margin;
+      }
+      
+      .wp-block-navigation-item {
+        color: $pageTempFeature-headerNavItems-color;
+
+        .wp-block-navigation-submenu li {
+          color: $pageTempFeature-headerNavSubItems-color !important;
+        }
+      }
+
+      // State: Reponsive Menu Open
+      .wp-block-navigation__responsive-container-open {
+        color: $pageTempFeature-headerNavItems-color;
+      }
+
+      .is-menu-open .wp-block-navigation-item {
+        color: $pageTempFeature-headerNavSubItems-color;
+      }
+    }
+
+    // Single Feature: Image
+    &-image {
+      height: $pageTempFeature-heightSm;
+      left: $pageTempFeature-image-left;
+      max-height: $pageTempFeature-mxHeight;
+      min-height: $pageTempFeature-minHeight;
+      position: $pageTempFeature-image-position;
+      right: $pageTempFeature-image-right;
+      top: $pageTempFeature-image-top;
+      width: $pageTempFeature-image-width;
+      z-index: $pageTempFeature-image-zIndex;
+
+      @media screen and (min-width: $breakpoint-medium) {
+        height: $pageTempFeature-heightLg;
+      }
+
+      .wp-block-cover {
+        height: $pageTempFeature-heightSm;
+        max-height: $pageTempFeature-mxHeight;
+        min-height: $pageTempFeature-minHeight;
+
+        @media screen and (min-width: $breakpoint-medium) {
+          height: $pageTempFeature-heightLg;
+        }
+
+        &__inner-container .wp-block-gridible-grid-container {
+          padding: 0 $siteGlobal-paddingHorz;
+        }
+      }
+    }
+  }
+}

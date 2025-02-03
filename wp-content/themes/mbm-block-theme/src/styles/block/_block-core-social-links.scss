@@ -1,0 +1,23 @@
+// Social Links Block Stylesheets
+// =============================================
+
+// Variables
+$socialLinks-linkStyleSquare-bRadius0:              0;
+
+
+// Structure
+.wp-block-social-links {
+
+  // Style Modification: Square
+  &.is-style-square .wp-block-social-link {
+    border-radius: $socialLinks-linkStyleSquare-bRadius0;
+  }
+}
+
+.wp-block-outermost-social-sharing {
+
+  // Style Modification: Square
+  &.is-style-square .wp-block-outermost-social-sharing-link {
+    border-radius: $socialLinks-linkStyleSquare-bRadius0;
+  }
+}

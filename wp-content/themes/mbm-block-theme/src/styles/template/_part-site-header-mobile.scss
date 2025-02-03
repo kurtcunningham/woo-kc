@@ -1,0 +1,90 @@
+// Mobile Header Site Part Stylesheets
+// =============================================
+
+// Variables
+$tempHeaderMobile-modal-bgColor:            #FFFFFF !important;
+$tempHeaderMobile-modal-color:              #000000 !important;
+$tempHeaderMobile-modal-padding:            var(--wp--preset--spacing--50);
+
+$tempHeaderMobile-modalContent-align:       flex-start !important;
+$tempHeaderMobile-modalContent-padTop:      80px;
+
+$tempHeaderMobile-modalNav-gap:             var(--wp--preset--spacing--50) !important;
+$tempHeaderMobile-modalNav-width:           100%;
+
+$tempHeaderMobile-modalNavItem-align:       center;
+
+$tempHeaderMobile-modalNavBtn-display:      block;
+$tempHeaderMobile-modalNavBtn-marLeft:      0;
+$tempHeaderMobile-modalNavBtn-marTop:       var(--wp--preset--spacing--50);
+$tempHeaderMobile-modalNavBtn-width:        100%;
+
+$tempHeaderMobile-modalSocialLinks-align:   center;
+$tempHeaderMobile-modalSocialLinks-marTop:  var(--wp--preset--spacing--50);
+$tempHeaderMobile-modalSocialLinks-width:   100%;
+
+
+// Structure
+.part-amplify-header {
+
+  // Mobile Header - Modal
+  .wp-block-navigation__responsive-container.is-menu-open {
+    background-color: $tempHeaderMobile-modal-bgColor;
+    color: $tempHeaderMobile-modal-color;
+    padding: $tempHeaderMobile-modal-padding;
+
+    .wp-block-navigation__responsive-container-content {
+      padding-top: $tempHeaderMobile-modalContent-padTop;
+      align-items: $tempHeaderMobile-modalContent-align;
+
+      .wp-block-navigation {
+        align-items: $tempHeaderMobile-modalContent-align;
+      }
+    }
+
+    // Mobile Header - Menu
+    .wp-block-navigation {
+
+      &:first-of-type {
+        gap: $tempHeaderMobile-modalNav-gap;
+        width: $tempHeaderMobile-modalNav-width;
+      }
+    }
+
+    .wp-block-navigation__container {
+      align-items: $tempHeaderMobile-modalContent-align;
+      gap: $tempHeaderMobile-modalNav-gap;
+      width: $tempHeaderMobile-modalNav-width;
+
+      // Mobile Header - Menu Links
+      .wp-block-navigation-item {
+        align-items: $tempHeaderMobile-modalNavItem-align;
+        width: $tempHeaderMobile-modalNav-width;
+        justify-content: $tempHeaderMobile-modalNavItem-align;
+      }
+      
+      .wp-block-navigation-item:not(.wp-block-navigation-submenu) {
+        font-size: var(--wp--preset--font-size--delta) !important;
+      }
+
+      & + .wp-block-buttons {
+        margin-left: $tempHeaderMobile-modalNavBtn-marLeft;
+        margin-top: $tempHeaderMobile-modalNavBtn-marTop;
+        width: $tempHeaderMobile-modalNavBtn-width;
+
+        .wp-block-button,
+        a {
+          display: $tempHeaderMobile-modalNavBtn-display;
+          width: $tempHeaderMobile-modalNavBtn-width;
+        }
+      }
+    }
+
+    // Mobile Header - Social Link
+    .wp-block-social-links {
+      justify-content: $tempHeaderMobile-modalSocialLinks-align;
+      margin-top: $tempHeaderMobile-modalSocialLinks-marTop;
+      width: $tempHeaderMobile-modalSocialLinks-width;
+    }
+  }
+}

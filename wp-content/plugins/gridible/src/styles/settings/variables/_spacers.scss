@@ -1,0 +1,82 @@
+// Spacers Variables Settings Stylesheet
+// ========================================
+
+// Variables
+$spacer-256:  256px;
+$spacer-128:  128px;
+$spacer-96:   96px;
+$spacer-64:   64px;
+$spacer-48:   48px;
+$spacer-40:   40px;
+$spacer-32:   32px;
+$spacer-24:   24px;
+$spacer-16:   16px;
+$spacer-12:   12px;
+$spacer-8:    8px;
+$spacer-4:    4px;
+$spacer-2:    2px;
+$spacer-0:     0;
+
+$spacer-auto:  auto;
+
+// Spacer Positions Map
+$spacer-positions: (
+  bottom: (
+    position: bottom
+  ),
+  left: (
+    position: left
+  ),
+  right: (
+    position: right
+  ),
+  top: (
+    position: top
+  )
+);
+
+// Spacer Values Map
+$spacer-values: (
+  0: (
+    value: $spacer-0
+  ),
+	2: (
+    value: $spacer-2
+  ),
+	4: (
+    value: $spacer-4
+  ),
+	8: (
+    value: $spacer-8
+  ),
+	12: (
+    value: $spacer-12
+  ),
+	16: (
+    value: $spacer-16
+  ),
+	24: (
+    value: $spacer-24
+  ),
+	32: (
+    value: $spacer-32
+  ),
+	40: (
+    value: $spacer-40
+  ),
+	48: (
+    value: $spacer-48
+  ),
+	64: (
+    value: $spacer-64
+  ),
+	96: (
+    value: $spacer-96
+  ),
+	128: (
+    value: $spacer-128
+  ),
+	256: (
+    value: $spacer-256
+  ),
+);

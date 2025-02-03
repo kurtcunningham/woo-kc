@@ -1,0 +1,11 @@
+{
+	"title": "Demo: Counter Global V1",
+	"name": "demo/counter-global-v1",
+	"description": "",
+	"category": "design",
+	"attributes": {
+	},
+	"supports": {
+		"interactivity": true
+	}
+}

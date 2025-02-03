@@ -1,0 +1,59 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"title": "Wrapper",
+	"name": "mbm/semantic-wrapper",
+	"description": "Looking to be more semantic? Look no further. Use this block to insert an HTML5 element into your layout.",
+	"category": "layout",
+	"keywords": [
+		"semantic",
+		"wrapper"
+	],
+	"supports": {
+		"anchor": true,
+		"align": true,
+		"ariaLabel": true,
+		"className": true,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": true,
+			"text": true
+		},
+		"customClassName": true,
+		"dimensions": {
+			"minHeight": true
+		},
+		"layout": true,
+		"multiple": true,
+		"reusable": true,
+		"position": {
+			"sticky": true
+		},
+    "spacing": {
+        "margin": true,
+        "padding": true,
+        "blockGap": true
+    },
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true,
+			"__experimentalDefaultControls": {
+				"color": true,
+				"radius": true,
+				"style": true,
+				"width": true
+			}
+		}
+	},
+	"editorScript": "mbm-gutenblocks/editor/script",
+	"viewScript": "mbm-gutenblocks/front/script",
+	"editorStyle": "mbm-gutenblocks/editor/style",
+	"style": "mbm-gutenblocks/front/style"
+}

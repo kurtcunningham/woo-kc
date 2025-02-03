@@ -1,0 +1,28 @@
+{
+    "name": "unrelated/amp-customizer-plugin",
+    "description": "Amplify Customizer Plugin",
+    "version": "1.0.0",
+    "type": "project",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/MadeByMunstersLLC/munsters-gutenberg-support.git"
+        }
+    ],
+    "config": {
+        "preferred-install": "dist"
+    },
+    "autoload": {
+        "psr-4": {
+            "Unrelated\\Amplify\\CustomizerPlugin\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "madebymunsters/munsters-gutenberg-support": "1.0.1"
+    }
+}

@@ -1,0 +1,49 @@
+// Grid Variables Stylesheet
+// ========================================
+
+
+// Grid Global Variables
+$grid-columns:          12;
+
+$grid-gutter:           32px;
+
+// Breakpoints
+// TODO: these breakpoints should be rewritten to match the names of the 
+// WordPres/Gutenberg "devices" (mobile, tablet, desktop).
+$grid-bp-small:         480px;
+$grid-bp-medium:        600px;
+$grid-bp-large:         1080px;
+
+$grid-breakpoints: (
+  '':      0,
+  sm:      $grid-bp-small,
+  md:      $grid-bp-medium,
+  lg:      $grid-bp-large,
+);
+
+
+// Alignment
+$grid-center:     center;
+$grid-default:    normal;
+$grid-end:        flex-end;
+$grid-start:      flex-start;
+
+$grid-alignments: (
+  center:     $grid-center,
+	normal:			$grid-default,
+  end:        $grid-end,
+  start:      $grid-start,
+);
+
+// Flow
+$grid-row:   					row;
+$grid-column:   		  column;
+$grid-col-reverse:    column-reverse;
+$grid-row-reverse:   	row-reverse;
+
+$flow-directions: (
+  standard:   				$grid-row,
+  column:   			 	  $grid-column,
+  reverse-column:     $grid-col-reverse,
+  reverse-row:      	$grid-row-reverse,
+);

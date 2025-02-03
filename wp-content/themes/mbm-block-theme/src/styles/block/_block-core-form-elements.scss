@@ -1,0 +1,163 @@
+// Form Input Block Stylesheets
+// =============================================
+
+// Variables
+$formInput-input-bxSizing:            border-box;
+$formInput-input-bxShadow:            none;
+$formInput-input-color:               var(--wp--preset--color--black-base);
+$formInput-input-fSize:               var(--wp--preset--font-size--foxtrot) !important;
+$formInput-input-padding:             5px 12px !important;
+$formInput-input-outline:             none;
+$formInput-input-trans:               all 0.35s ease-in-out;
+$formInput-input-width:               100%;
+
+$formInput-select-bgImg:              url('./src/images/icon/icon-select.svg');
+$formInput-select-bgPos:              calc(100% - 12px) center !important;
+$formInput-select-bgRept:             no-repeat;
+$formInput-select-padRt:              32px !important;
+
+$formInput-textarea-borderRadius:     0 !important;
+$formInput-textarea-height:           150px;
+
+$formInput-label-marBottom:           var(--wp--preset--spacing--30);
+
+
+// Structure
+// Form Input - Inputs
+#{$all-text-inputs},
+select,
+textarea,
+.form-theme--framework #{$all-text-inputs},
+.gform_wrapper.gravity-theme #{$all-text-inputs},
+.gform_wrapper.gravity-theme select,
+.gform_wrapper.gravity-theme textarea {
+  box-sizing: $formInput-input-bxSizing;
+  box-shadow: $formInput-input-bxShadow !important;
+  color: $formInput-input-color;
+  font-size: $formInput-input-fSize;
+  height: auto !important;
+  padding: $formInput-input-padding;
+  outline: $formInput-input-outline;
+  transition: $formInput-input-trans;
+  width: $formInput-input-width;
+
+  -webkit-appearance: none;
+
+  &::placeholder {
+    color: rgba(0,0,0,0.5);
+  }
+}
+
+// Form Input - Select
+select {
+  background-image: $formInput-select-bgImg;
+  background-position: $formInput-select-bgPos;
+  background-repeat: $formInput-select-bgRept;
+  padding-right: $formInput-select-padRt;
+
+ -moz-appearance: none; // Hide Firefox default select styles
+}
+
+// Form Input - Textarea
+textarea {
+  height: $formInput-textarea-height !important;
+
+  &::placeholder {
+    color: rgba(0,0,0,0.5) !important;
+  }
+}
+
+// Form Input - File
+input[type="file"]::file-selector-button {
+  cursor: pointer;
+  margin-right: var(--wp--preset--spacing--30);
+  transition: background-color 200ms;
+}
+
+.gform_fileupload_rules.gfield_description {
+  padding-top: var(--wp--preset--spacing--20) !important;
+}
+
+// Form Input - Radio
+input[type="radio"] {
+  box-shadow: $formInput-input-bxShadow !important;
+}
+
+// Form Input - Checkbox
+input[type="checkbox"] {
+  box-shadow: $formInput-input-bxShadow !important;
+}
+
+// Gravity Forms
+.gform-theme--foundation .gform_fields {
+  column-gap: var(--wp--preset--spacing--50) !important;
+  row-gap: 24px !important;
+}
+
+.gchoice {
+  align-items: flex-start;
+  display: flex;
+  gap: 4px;
+
+  label {
+    margin-top: -4px;
+    text-transform: none;
+  }
+}
+
+// Form Input - Submit
+input[type="submit"],
+.gform_wrapper.gravity-theme input[type="submit"] {
+
+  &:hover {
+    opacity: 0.5 !important;
+  }
+}
+
+// Form Input - Fieldset
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+label {
+  align-items: center;
+  display: inline-flex;
+  gap: 4px;
+  margin-bottom: $formInput-label-marBottom;
+}
+
+// Gravity Forms Overrides
+.gform_wrapper.gravity-theme .gform_fields {
+  gap: 12px;
+
+  @media screen and (min-width: $breakpoint-medium) {
+    gap: 24px;
+  }
+}
+
+.gform-theme--foundation .gform_fields {
+
+  @media screen and (max-width: $breakpoint-medium) {
+    grid-template-columns: repeat(8,1fr);
+  }
+}
+
+.gform_required_legend {
+  display: none;
+}
+
+.gfield_description {
+  color: var(--wp--preset--color--black-base);
+  font-size: 12px !important;
+  margin: 0 !important;
+}
+
+.gfield_required_asterisk {
+  color: var(--wp--preset--color--aqua-base) !important;
+}
+
+.gform_confirmation_message_2 {
+  color: var(--wp--preset--color--white-base);
+  text-align: center;
+}

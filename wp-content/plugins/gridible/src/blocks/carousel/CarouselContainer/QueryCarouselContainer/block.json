@@ -1,0 +1,50 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"title": "Carousel Query",
+	"name": "gridible/query-carousel-container",
+	"description": "Showcase post content in a sleek, swipe-friendly slider, perfect for highlighting blog posts, news posts, and more.",
+	"category": "design",
+	"attributes": {
+		"carouselType": {
+			"type": "string",
+			"default": "query"
+		}
+	},
+	"allowedBlocks": [
+		"core/post-template"
+	],
+	"providesContext": {
+		"gridible/carouselType": "carouselType"
+	},
+	"supports": {
+		"anchor": true,
+		"align": true,
+		"ariaLabel": false,
+		"className": true,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": false,
+			"text": false
+		},
+		"customClassName": true,
+		"dimensions": {
+			"minHeight": false
+		},
+		"layout": true,
+		"multiple": true,
+		"reusable": true,
+		"position": false,
+    "spacing": {
+        "margin": true,
+        "padding": true,
+        "blockGap": false
+    },
+		"typography": false,
+		"interactivity": true
+	},
+	"editorScript": "gridible-blocks/editor/script",
+	"editorStyle": "gridible-blocks/editor/style",
+	"style": "gridible-blocks/front/style"
+}

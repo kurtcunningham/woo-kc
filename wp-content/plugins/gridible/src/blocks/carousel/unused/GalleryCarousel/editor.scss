@@ -1,0 +1,11 @@
+.test.foo-bar.ef {
+  color: pink;
+}
+
+.block-editor-block-list__block.wp-block-gallery.swiper.is-layout-flex {
+  flex-wrap: nowrap;
+  // Match Gridible
+  gap: 32px;
+  // gap: 0;
+  overflow-x: scroll;
+}

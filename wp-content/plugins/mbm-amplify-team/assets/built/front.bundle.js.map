@@ -1,0 +1,1 @@
+{"version":3,"file":"front.bundle.js","sources":["../../src/front.js"],"sourcesContent":["console.log(`Amplif Events: front module loaded.`)\n"],"names":[],"mappings":"AAAA,OAAO,CAAC,GAAG,CAAC,CAAC,mCAAmC,CAAC"}

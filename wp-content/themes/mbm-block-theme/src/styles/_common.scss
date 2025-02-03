@@ -1,0 +1,23 @@
+// Global Variables
+$breakpoint-small:          480px;
+$breakpoint-medium:         600px;
+$breakpoint-large:          1080px;
+
+$container-width:           var(--wp--style--global--wide-size);
+
+$fontAwesomeFFamily:        "Font Awesome 6 Free";
+
+$siteGlobal-paddingHorz:    var(--wp--style--root--padding-right);
+
+
+// Base
+@import "base";
+
+// Blocks
+@import "block";
+
+// Patterns
+@import "pattern";
+
+// Templates
+@import "template";

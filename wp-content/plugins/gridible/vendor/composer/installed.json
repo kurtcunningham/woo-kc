@@ -1,0 +1,92 @@
+{
+    "packages": [
+        {
+            "name": "devster/ubench",
+            "version": "2.1.0",
+            "version_normalized": "2.1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/devster/ubench.git",
+                "reference": "18467017d0ce4db67bc9872393e88a27d87069df"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/devster/ubench/zipball/18467017d0ce4db67bc9872393e88a27d87069df",
+                "reference": "18467017d0ce4db67bc9872393e88a27d87069df",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "time": "2019-06-03T06:54:12+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-0": {
+                    "Ubench": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Perret",
+                    "email": "jeremy@devster.org"
+                }
+            ],
+            "description": "Micro PHP library for benchmarking",
+            "homepage": "https://github.com/devster/ubench",
+            "keywords": [
+                "bench",
+                "benchmark",
+                "library",
+                "micro"
+            ],
+            "support": {
+                "issues": "https://github.com/devster/ubench/issues",
+                "source": "https://github.com/devster/ubench/tree/master"
+            },
+            "install-path": "../devster/ubench"
+        },
+        {
+            "name": "madebymunsters/munsters-gutenberg-support",
+            "version": "1.0.1",
+            "version_normalized": "1.0.1.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:MadeByMunstersLLC/munsters-gutenberg-support.git",
+                "reference": "25297d38cc435a9441844d80086f5fe748c6e751"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MadeByMunstersLLC/munsters-gutenberg-support/zipball/25297d38cc435a9441844d80086f5fe748c6e751",
+                "reference": "25297d38cc435a9441844d80086f5fe748c6e751",
+                "shasum": ""
+            },
+            "time": "2024-03-26T00:41:05+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Madebymunsters\\Gutenberg\\": "lib"
+                }
+            },
+            "description": "Support for Munsters Gutenberg blocks",
+            "homepage": "https://madebymunsters.com",
+            "support": {
+                "source": "https://github.com/MadeByMunstersLLC/munsters-gutenberg-support/tree/1.0.1",
+                "issues": "https://github.com/MadeByMunstersLLC/munsters-gutenberg-support/issues"
+            },
+            "install-path": "../madebymunsters/munsters-gutenberg-support"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

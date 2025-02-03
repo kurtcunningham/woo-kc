@@ -1,0 +1,68 @@
+// Button Core Block Stylesheets
+// =============================================
+
+// Variables
+$button-link-opHov:                       0.65;
+$button-link-hovTrans:                    all 0.35s ease-in-out;
+
+$button-linkStyle-bg:                     transparent !important;
+$button-linkStyle-border:                 none !important;
+$button-linkStyle-padding:                0 !important;
+
+$button-linkIconStyle-align:              center;
+$button-linkIconStyle-bRadius:            100em;
+$button-linkIconStyle-display:            inline-flex;
+$button-linkIconStyle-fSize:              10px;
+$button-linkIconStyle-lHeight:            1.25;
+$button-linkIconStyle-size:               20px;
+$button-linkIconStyle-trans:              all 0.35s ease;
+
+
+// Structure
+.wp-block-button {
+
+  // Button - Link
+  &__link {
+    transition: $button-link-hovTrans;
+
+    // States
+    &:hover {
+      opacity: $button-link-opHov;
+    }
+
+    i {
+      margin-right: var(--wp--preset--spacing--20);
+    }
+  }
+
+  // Button - Style: Link
+  &.is-style-link &__link {
+    background: $button-linkStyle-bg;
+    border: $button-linkStyle-border;
+    padding: $button-linkStyle-padding;
+
+    align-items: $button-linkIconStyle-align;
+    display: $button-linkIconStyle-display;
+    gap: var(--wp--preset--spacing--30);
+
+    mark {
+      align-items: $button-linkIconStyle-align;
+      border-radius: $button-linkIconStyle-bRadius;
+      display: $button-linkIconStyle-display;
+      font-size: $button-linkIconStyle-fSize;
+      height: $button-linkIconStyle-size;
+      justify-content: $button-linkIconStyle-align;
+      line-height: $button-linkIconStyle-lHeight;
+      transition: $button-linkIconStyle-trans;
+      width: $button-linkIconStyle-size;
+
+      i {
+        margin: 0;
+      }
+    }
+
+    &:hover {
+      gap: var(--wp--preset--spacing--40);
+    }
+  }
+}

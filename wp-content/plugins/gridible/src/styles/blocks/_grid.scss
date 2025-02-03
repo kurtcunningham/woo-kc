@@ -1,0 +1,99 @@
+// Grid Block Stylesheet
+// ========================================
+
+@use '../settings/variables/grid' as *;
+@use '../settings/mixins/grid' as *;
+@use '../settings/class-names' as class-names;
+
+// Variables
+$grid-container-bxSizing:     border-box;
+
+$grid-row-bxSizing:           border-box;
+$grid-row-gap:           			$grid-gutter;
+$grid-row-display:            flex;
+$grid-row-flex:               0 1 auto;
+$grid-row-fDirection:         row;
+$grid-row-fWrap:              wrap;
+$grid-row-width:              auto;
+
+// Structure
+.wp-block-#{class-names.$class-prefix}container,
+.#{class-names.$class-prefix}container {
+  box-sizing: $grid-container-bxSizing;
+}
+
+// Row
+.#{class-names.$class-prefix}row,
+.#{class-names.$class-prefix}row > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  box-sizing: $grid-row-bxSizing;
+	column-gap: $grid-row-gap;
+  display: $grid-row-display;
+  flex: $grid-row-flex;
+  flex-direction: $grid-row-fDirection;
+  flex-wrap: $grid-row-fWrap;
+  width: $grid-row-width;
+}
+
+// Row Alignment
+.#{class-names.$class-prefix}row {
+	@each $modifier, $breakpoint in $grid-breakpoints {
+
+		@if($modifier == '') {
+			$modifier: 'all';
+		}
+
+		@include create-mq($breakpoint, 'min') {
+
+			@each $alignment, $value in $grid-alignments {
+
+				&__#{$modifier}-#{$alignment},
+				&__#{$modifier}-#{$alignment} > .block-editor-inner-blocks > .block-editor-block-list__layout {
+					align-items: $value;
+				}
+			}
+
+			@each $direction, $value in $flow-directions {
+
+				&__#{$modifier}-#{$direction},
+				&__#{$modifier}-#{$direction} > .block-editor-inner-blocks > .block-editor-block-list__layout {
+					flex-direction: $value;
+				}
+			}
+		}
+	}
+}
+
+// Columns
+.#{class-names.$class-prefix}col {
+  @each $modifier, $breakpoint in $grid-breakpoints {
+    @include grid-columns($modifier, $grid-columns, $breakpoint);
+  }
+}
+
+// Columns Offfset
+.#{class-names.$class-prefix}offset {
+  @each $modifier, $breakpoint in $grid-breakpoints {
+    @include grid-offset($modifier, $grid-columns, $breakpoint);
+  }
+}
+
+// Column Visibility
+// WARN: These may not be used anymore!
+@each $modifier, $breakpoint in $grid-breakpoints {
+
+  @if($modifier == '') {
+    $modifier: 'all';
+  }
+
+  @include create-mq($breakpoint - 1, 'max') {
+    .hidden--#{$modifier}-down {
+      display: none !important;
+    }
+  }
+
+  @include create-mq($breakpoint, 'min') {
+    .hidden--#{$modifier}-up {
+      display: none !important;
+    }
+  }
+}

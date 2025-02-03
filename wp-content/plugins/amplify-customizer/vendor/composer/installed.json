@@ -1,0 +1,37 @@
+{
+    "packages": [
+        {
+            "name": "madebymunsters/munsters-gutenberg-support",
+            "version": "1.0.1",
+            "version_normalized": "1.0.1.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:MadeByMunstersLLC/munsters-gutenberg-support.git",
+                "reference": "25297d38cc435a9441844d80086f5fe748c6e751"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MadeByMunstersLLC/munsters-gutenberg-support/zipball/25297d38cc435a9441844d80086f5fe748c6e751",
+                "reference": "25297d38cc435a9441844d80086f5fe748c6e751",
+                "shasum": ""
+            },
+            "time": "2024-03-26T00:41:05+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Madebymunsters\\Gutenberg\\": "lib"
+                }
+            },
+            "description": "Support for Munsters Gutenberg blocks",
+            "homepage": "https://madebymunsters.com",
+            "support": {
+                "source": "https://github.com/MadeByMunstersLLC/munsters-gutenberg-support/tree/1.0.1",
+                "issues": "https://github.com/MadeByMunstersLLC/munsters-gutenberg-support/issues"
+            },
+            "install-path": "../madebymunsters/munsters-gutenberg-support"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

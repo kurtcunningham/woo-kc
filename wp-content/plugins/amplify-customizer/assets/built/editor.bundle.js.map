@@ -1,0 +1,1 @@
+{"version":3,"file":"editor.bundle.js","sources":["../../src/editor.js"],"sourcesContent":["// import './Blocks/TableOfContents';\n// import './Blocks/ACFMetadataButtons';\n\n\nconsole.log(`[amp-customizer-plugin] Editor script loaded.`)\n"],"names":["console","log"],"mappings":";;;CAAA;CACA;;CAGAA,OAAO,CAACC,GAAG,CAAC,CAAA,6CAAA,CAA+C,CAAC;;;;;;"}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "title": "Carousel Slide",
+  "name": "mbm/carousel-slide",
+  "category": "design",
+  "parent": [
+    "mbm/carousel",
+    "mbm/carousel-query"
+  ],
+  "editorScript": "mbm-gutenblocks/editor/script",
+  "viewScript": "mbm-gutenblocks/front/script",
+  "editorStyle": "mbm-gutenblocks/editor/style",
+  "style": "mbm-gutenblocks/front/style"
+}

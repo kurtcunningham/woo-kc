@@ -1,0 +1,123 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "daa6aa97ec83cf20475309c08a32b83f",
+    "packages": [
+        {
+            "name": "haydenpierce/class-finder",
+            "version": "0.4.4",
+            "source": {
+                "type": "git",
+                "url": "git@gitlab.com:hpierce1102/ClassFinder.git",
+                "reference": "94c602870ddf8d4fa2d67fb9bae637d88f9bd76e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/hpierce1102%2FClassFinder/repository/archive.zip?sha=94c602870ddf8d4fa2d67fb9bae637d88f9bd76e",
+                "reference": "94c602870ddf8d4fa2d67fb9bae637d88f9bd76e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "^1.6",
+                "phpunit/phpunit": "~9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "HaydenPierce\\ClassFinder\\": "src/",
+                    "HaydenPierce\\ClassFinder\\UnitTest\\": "test/unit"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hayden Pierce",
+                    "email": "hayden@haydenpierce.com"
+                }
+            ],
+            "description": "A library that can provide of a list of classes in a given namespace",
+            "time": "2022-09-26T22:42:59+00:00"
+        },
+        {
+            "name": "madebymunsters/munsters-gutenberg-support",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:MadeByMunstersLLC/munsters-gutenberg-support.git",
+                "reference": "0934b16d072263483527fa33fc4e04a63ba58af5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MadeByMunstersLLC/munsters-gutenberg-support/zipball/0934b16d072263483527fa33fc4e04a63ba58af5",
+                "reference": "0934b16d072263483527fa33fc4e04a63ba58af5",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Madebymunsters\\Gutenberg\\": "lib"
+                }
+            },
+            "description": "Support for Munsters Gutenberg blocks",
+            "homepage": "https://madebymunsters.com",
+            "support": {
+                "source": "https://github.com/MadeByMunstersLLC/munsters-gutenberg-support/tree/1.1.0",
+                "issues": "https://github.com/MadeByMunstersLLC/munsters-gutenberg-support/issues"
+            },
+            "time": "2024-11-01T15:45:50+00:00"
+        },
+        {
+            "name": "madebymunsters/munsters-wp-core-theme",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:MadeByMunstersLLC/munsters-wp-theme-core.git",
+                "reference": "6ac101b353164211da4a52e67d4af770e63b174c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MadeByMunstersLLC/munsters-wp-theme-core/zipball/6ac101b353164211da4a52e67d4af770e63b174c",
+                "reference": "6ac101b353164211da4a52e67d4af770e63b174c",
+                "shasum": ""
+            },
+            "require": {
+                "haydenpierce/class-finder": "^0.4.3"
+            },
+            "require-dev": {
+                "timber/timber": "^1.20"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "mbm\\": "lib"
+                }
+            },
+            "description": "Core code shared between Munsters WordPress themes.",
+            "homepage": "https://madebymunsters.com",
+            "support": {
+                "source": "https://github.com/MadeByMunstersLLC/munsters-wp-theme-core/tree/v2.1.0",
+                "issues": "https://github.com/MadeByMunstersLLC/munsters-wp-theme-core/issues"
+            },
+            "time": "2024-11-15T21:45:58+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {},
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
+}

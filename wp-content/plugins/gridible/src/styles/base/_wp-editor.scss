@@ -1,0 +1,33 @@
+// WP Editor Base Stylesheet
+// ========================================
+
+@use "../settings//mixins/spacers" as *;
+@use "../settings/variables/spacers" as *;
+
+// Variables
+$wpEditorfull-label-margin:						2px;
+$wpEditorfull-label-mxWidth:					100%;
+
+$wpEditorfull-comControl-width:				100%;
+
+
+// Structure
+.edit-post-sidebar {
+
+	// Spacing
+	.label__spacing {
+		margin-bottom: $wpEditorfull-label-margin;
+	}
+
+
+	// Labels
+	.components-panel__row label {
+		@include spacer(margin, right, $spacer-0);
+		max-width: $wpEditorfull-label-mxWidth;
+	}
+
+	// Inputs
+	.components-base-control {
+		width: $wpEditorfull-comControl-width;
+	}
+}

@@ -1,0 +1,72 @@
+// Carousel Amplify Block Stylesheets
+// =============================================
+
+// Variables
+$ampCarousel-paddingBottom:                                   var(--wp--preset--spacing--40);
+
+$ampCarousel-stateHover-cursor:                               grab;
+$ampCarousel-stateActive-cursor:                              grabbing;
+
+$ampCarousel-pagination-cordBottom:                           -4px;
+
+$ampCarousel-paginationBullet-bgColor:                        var(--wp--preset--color--shade-1);
+$ampCarousel-paginationBullet-bgColorAct:                     var(--wp--preset--color--primary-1);
+
+
+$ampCarousel-paginationNavButton-bgColor:                     var(--wp--preset--color--primary-1);
+$ampCarousel-paginationNavButton-size:                        var(--wp--preset--spacing--60);
+
+$ampCarousel-paginationNavButtonIcon-color:                   var(--wp--preset--color--shade-3);
+$ampCarousel-paginationNavButtonIcon-fSize:                   var(--wp--preset--font-size--echo);
+
+$ampCarousel-paginationNavButtonDisabled-cursor:              not-allowed;
+$ampCarousel-paginationNavButtonDisabled-pEvents:             auto;
+
+
+// Structure
+.wp-block-gridible-static-carousel-container.swiper,
+.wp-block-gridible-query-carousel-container.swiper {
+  padding-bottom: $ampCarousel-paddingBottom;
+
+  // Carousel - Pagination
+  .swiper-pagination {
+    bottom: $ampCarousel-pagination-cordBottom;
+
+    // Carousel - Pagination Bullet
+    &-bullet {
+      background-color: $ampCarousel-paginationBullet-bgColor;
+
+      // State
+      &-active {
+        background-color: $ampCarousel-paginationBullet-bgColorAct;
+      }
+    }
+  }
+
+  // Carousel - Next + Prev Buttons
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-color: $ampCarousel-paginationNavButton-bgColor;
+    height: $ampCarousel-paginationNavButton-size;
+    width: $ampCarousel-paginationNavButton-size;
+
+    &::after {
+      color: $ampCarousel-paginationNavButtonIcon-color;
+      font-size: $ampCarousel-paginationNavButtonIcon-fSize;
+    }
+  }
+
+  .swiper-button-disabled {
+    cursor: $ampCarousel-paginationNavButtonDisabled-cursor;
+    pointer-events: $ampCarousel-paginationNavButtonDisabled-pEvents;
+  }
+
+  // State
+  &:hover {
+    cursor: $ampCarousel-stateHover-cursor;
+  }
+
+  &:active {
+    cursor: $ampCarousel-stateActive-cursor;
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+	"title": "Event Registration Deadline",
+	"name": "mbm-npt-events/event-registration-deadline",
+	"description": "Display the date and time of an event's registration deadline.",
+	"category": "mbm-npt-events",
+	"usesContext": [
+		"postId",
+		"postType"
+	],
+	"supports": {
+		"anchor": true,
+		"align": true,
+		"ariaLabel": false,
+		"className": true,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": true,
+			"text": true
+		},
+		"customClassName": true,
+		"dimensions": {
+			"minHeight": true
+		},
+		"layout": true,
+		"multiple": true,
+		"reusable": true,
+		"position": {
+			"sticky": true
+		},
+    "spacing": {
+        "margin": true,
+        "padding": true,
+        "blockGap": true
+    },
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		},
+		"interactivity": true
+	},
+	"render": "file:./render.php",
+	"editorScript": "mbm-npt-events/editor/script",
+	"editorStyle": "mbm-npt-events/editor/style",
+	"style": "mbm-npt-events/front/style"
+}

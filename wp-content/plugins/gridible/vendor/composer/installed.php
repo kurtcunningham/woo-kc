@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => 'gridible/plugin',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'reference' => null,
+        'type' => 'project',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        'devster/ubench' => array(
+            'pretty_version' => '2.1.0',
+            'version' => '2.1.0.0',
+            'reference' => '18467017d0ce4db67bc9872393e88a27d87069df',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../devster/ubench',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'gridible/plugin' => array(
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'reference' => null,
+            'type' => 'project',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'madebymunsters/munsters-gutenberg-support' => array(
+            'pretty_version' => '1.0.1',
+            'version' => '1.0.1.0',
+            'reference' => '25297d38cc435a9441844d80086f5fe748c6e751',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../madebymunsters/munsters-gutenberg-support',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);

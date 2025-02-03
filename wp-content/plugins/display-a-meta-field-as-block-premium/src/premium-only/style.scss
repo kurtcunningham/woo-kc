@@ -1,0 +1,28 @@
+// Gallery field
+.mfb-block-gallery {
+  &.is-masonry {
+    column-count: var(--mfb-gallery-columns, 3);
+    column-gap: var(--mfb-gallery-gap, 1em);
+
+    > .wp-block-image {
+      margin: 0 0 var(--mfb-gallery-gap, 1em) !important;
+    }
+  }
+  &.is-cropped {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--mfb-gallery-gap, 1em);
+
+    > .wp-block-image {
+      flex: 1 1 var(--mfb-gallery-item-width, 100%);
+      max-width: 100%;
+      margin: 0 !important;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

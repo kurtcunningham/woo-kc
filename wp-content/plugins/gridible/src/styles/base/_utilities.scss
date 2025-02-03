@@ -1,0 +1,41 @@
+// Utilities Base Stylesheets
+// ========================================
+
+@use "sass:map";
+@use '../settings/variables/grid' as *;
+@use "../settings//mixins/spacers" as *;
+@use "../settings//mixins/grid" as *;
+@use "../settings/variables/sizes" as *;
+
+// Variables
+$border-radius-count:							10;
+
+
+// Border Radius
+@for $i from 1 through $border-radius-count {
+
+	.border-radius__#{$i} {
+		border-radius: $i + px;
+	}
+}
+
+// Padding
+@each $modifier, $breakpoint in $grid-breakpoints {
+	@include create-mq($breakpoint, 'min') {
+		@if($breakpoint == 0) {
+			@each $size, $keys in $sizes {
+        $size-value:  map.get($keys, size-prop);
+				.padding__#{$size} {
+					@include spacer(padding, all, $size-value);
+        }
+      }
+    } @else {
+			@each $size, $keys in $sizes {
+        $size-value:  map.get($keys, size-prop);
+				.padding__#{$modifier}-#{$size} {
+					@include spacer(padding, all, $size-value);
+        }
+      }
+    }
+  }
+}

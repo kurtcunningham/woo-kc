@@ -1,0 +1,49 @@
+// Layout Base Stylesheets
+// =============================================
+
+// Variables
+$siteBlocks-overflowX:            clip;
+$siteBlocks-position:             relative;
+$siteBlocks-scrollBehav:          smooth;
+
+$siteSize-heightFull:             100%;
+
+$siteMargin-zero:                 0;
+
+$sitePositionSticky-resetSm:      static;
+
+// Structure
+html {
+  scroll-behavior: $siteBlocks-scrollBehav;
+}
+
+html,
+body {
+  position: $siteBlocks-position;
+}
+
+body {
+  overflow-x: $siteBlocks-overflowX;
+}
+
+// Sizes
+.has-full-height {
+  height: $siteSize-heightFull;
+}
+
+// Reset
+.has-0-margin {
+  margin: $siteMargin-zero !important;
+}
+
+// Position: Sticky
+@media screen and (min-width: 0) and (max-width: $breakpoint-medium) {
+  .is-position-sticky {
+    position: $sitePositionSticky-resetSm;
+  }
+}
+
+// Ulitlity Class: Flex Equal Height
+.is-equal-height-flex {
+  display: flex;
+}

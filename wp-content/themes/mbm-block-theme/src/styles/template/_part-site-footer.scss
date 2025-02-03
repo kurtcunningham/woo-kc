@@ -1,0 +1,109 @@
+// Footer Site Part Stylesheets
+// =====================================================
+
+// Variables
+$partFooter-socialIcons-jContentMd:               center;
+$partFooter-socialIcons-jContentLg:               space-between;
+
+$partFooter-siteLogo-width:                       100%;
+
+$partFooter-siteLogoLink-align:                   center;
+$partFooter-siteLogoLink-display:                 flex;
+$partFooter-siteLogoLink-width:                   100%;
+
+$partFooter-nav-alignSm:                          center;
+$partFooter-nav-alignLg:                          flex-start;
+$partFooter-nav-gap:                              12px;
+$partFooter-nav-widthSm:                          100%;
+$partFooter-nav-widthMd:                          initial;
+$partFooter-nav-gap:                              12px;
+
+$partFooter-navItemLink-fWeight:                  400;
+$partFooter-navItemLink-trans:                    opacity 0.35s ease;
+$partFooter-navItemLink-opHov:                    0.5;
+
+$partFooter-modifierFillHeight-height:            100%;
+
+
+// Structure
+.part-amplify-footer {
+
+  // Part Footer - Sections
+  &__bottom {
+
+    p {
+      text-align: center;
+
+      @media screen and (min-width: $breakpoint-large) {
+        text-align: inherit;
+
+        &.has-text-align-right {
+          text-align: right;
+        }
+      }
+    }
+  }
+  
+  // Part Footer - Social Links
+  .wp-block-social-links {
+    justify-content: $partFooter-socialIcons-jContentMd;
+
+    @media screen and (min-width: $breakpoint-large) {
+      justify-content: $partFooter-socialIcons-jContentLg;
+    }
+  }
+
+  // Part Footer - Logo
+  &__site-logo  {
+    width: $partFooter-siteLogo-width;
+
+    a {
+      display: $partFooter-siteLogoLink-display;
+      justify-content: $partFooter-siteLogoLink-align;
+      width: $partFooter-siteLogoLink-width;
+    }
+  }
+
+  // Part Footer - Navigation
+  .wp-block-navigation {
+    align-items: $partFooter-nav-alignSm;
+    gap: $partFooter-nav-gap;
+    width: $partFooter-nav-widthSm;
+
+    @media screen and (min-width: $breakpoint-medium) {
+      width: $partFooter-nav-widthMd;
+    }
+
+    @media screen and (min-width: $breakpoint-large) {
+      align-items: $partFooter-nav-alignLg;
+    }
+
+    .wp-block-navigation-link a {
+      font-weight: $partFooter-navItemLink-fWeight;
+      transition: $partFooter-navItemLink-trans;
+
+      &:hover {
+        opacity: $partFooter-navItemLink-opHov;
+      }
+    }
+  }
+
+  // Part Footer - Global Classes
+  .is-center-mobile {
+    align-self: $partFooter-nav-alignSm;
+    text-align: $partFooter-nav-alignSm;
+
+    @media screen and (min-width: $breakpoint-large) {
+      align-self: $partFooter-nav-alignLg;
+      text-align: left;
+    }
+  }
+
+  // Part Footer - Modifers: Fill Space
+  &-fill-space {
+
+    @media screen and (min-width: $breakpoint-large) {
+      height: $partFooter-modifierFillHeight-height;
+    }
+  }
+}

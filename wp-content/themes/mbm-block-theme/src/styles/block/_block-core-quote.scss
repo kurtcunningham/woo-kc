@@ -1,0 +1,29 @@
+// Quote Block Stylesheets
+// =============================================
+
+// Variables
+$quote-marginReset:               0;
+
+$quote-cite-fSize:                var(--wp--preset--font-size--golf);
+$quote-cite-fStyle:               normal;
+$quote-cite-fWeight:              400;
+$quote-cite-opacity:              0.75;
+$quote-cite-tTransform:           initial;
+
+
+// Structure
+.wp-block-quote,
+.wp-block-pullquote {
+  margin: $quote-marginReset;
+
+
+  // Quote - Cite
+  cite,
+  cite mark {
+    font-size: $quote-cite-fSize;
+    font-style: $quote-cite-fStyle;
+    font-weight: $quote-cite-fWeight;
+    opacity: $quote-cite-opacity;
+    text-transform: $quote-cite-tTransform;
+  }
+}
